@@ -2,7 +2,7 @@
 include_once "includes/header.php";
 
 $allDogs = getFile("db.json")["dogs"];
-$links = ['name'=>'id', 'breed'=>'breed'];
+$links = ['name'=>['page'=>'/show', 'param'=>'id'], 'breed'=>['page'=>'/list', 'param'=>'breed']];
 $headers = ['name', 'breed', 'age', 'notes', 'owner'];
 
 ?>

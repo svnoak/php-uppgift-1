@@ -35,7 +35,9 @@ function createTableRows($array, $links, $headers, $action){
             if( in_array( $key, $headers ) ){
                 if( array_key_exists( $key, $links ) ){
                     $i = $links[$key];
-                    $row .= "<td><a href=?$i=$items[$i]>$item</a></td>";
+                    $page = $i['page'];
+                    $param = $i['param'];
+                    $row .= "<td><a href=$page.php?$param=$items[$param]>$item</a></td>";
                 }elseif( $key == "owner") {
                     $row .= "<td>" . findInDB($item, "users", "id", "username") . "</td>";
                     }else{
