@@ -1,1 +1,72 @@
-/* Din CSS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav,
+footer {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav{
+    margin-top: 1vh;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+footer{
+    height: 100px;
+    border-top: 1px solid rgba(0,0,0,0.5);
+}
+
+nav ul {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    padding: 0 1vw;
+    margin: 0 1vw;
+    color: black;
+    text-decoration: none;
+}
+
+.header{
+    height: 300px;
+    background-image: url("/assets/images/header.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+}
+
+section{
+    margin-top: 1vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}

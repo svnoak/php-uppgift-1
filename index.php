@@ -1,4 +1,10 @@
 <?php
-// Startsidan. Glöm inte inkludera footer/header/functions-filerna på de sidor
-// som behöver dom. Glöm inte heller session_start när det behövs!
+include_once "includes/header.php";
+?>
+<section>
+    <h1>Welcome to IDDb!</h1>
+    <p>You can <a href="/sign-in.php">Sign in</a>or <a href="/list.php">List all of the dogs</a>.</p>
+</section>
+<?php
+include_once "includes/footer.php";
 ?>
