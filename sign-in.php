@@ -1,8 +1,6 @@
 <?php
 include_once "includes/header.php";
 
-unset($_SESSION['status']);
-
 if( isset($_POST['signin']) ){
     if( strlen($_POST['email']) && strlen($_POST['password']) ){
         $email = $_POST['email'];
