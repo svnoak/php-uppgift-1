@@ -26,6 +26,9 @@ require_once "functions.php";
                 <a href="/list.php">Dogs</a>
             </li>
             <?php  if( isLoggedIn() ){ ?>
+                <li>
+                <a href="/add.php">Add</a>
+            </li>
             <li>
                 <a href="/profile.php">Profile</a>
             </li>
