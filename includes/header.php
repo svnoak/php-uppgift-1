@@ -1,6 +1,9 @@
 <?php
 require_once "authentication.php";
 require_once "functions.php";
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,14 +25,17 @@ require_once "functions.php";
             <li>
                 <a href="/list.php">Dogs</a>
             </li>
-            <li>
-                <a href="/sign-in.php">Sign in</a>
-            </li>
+            <?php  if( isLoggedIn() ){ ?>
             <li>
                 <a href="/profile.php">Profile</a>
             </li>
             <li>
                 <a href="/sign-out.php">Sign out</a>
             </li>
+            <?php }else{ ?>
+            <li>
+                <a href="/sign-in.php">Sign in</a>
+            </li>
+            <?php } ?>
         </ul>
     </nav>
