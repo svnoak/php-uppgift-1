@@ -32,8 +32,10 @@ function createTableRows($array, $links, $headers, $action){
                 if( array_key_exists( $key, $links ) ){
                     $i = $links[$key];
                     $row .= "<td><a href=?$i=$items[$i]>$item</a></td>";
-                }else{
-                    $row .= "<td>$item</td>";
+                }elseif( $key == "owner") {
+                    $row .= "<td>" . findInDB($item, "users", "id", "username") . "</td>";
+                    }else{
+                        $row .= "<td>$item</td>";
                     }
             }
         }
@@ -50,16 +52,14 @@ function isURI($URI){
     return $_SERVER['REQUEST_URI'] == "/$URI.php";
 }
 
-function findInDB($searchArg, $dbarg, $key){
+function findInDB($searchArg, $dbarg, $searchKey, $returnValue){
     $db = getDB($dbarg);
-    $column = array_column($db, $key);
+    $column = array_column($db, $searchKey);
     $found = array_search($searchArg, $column);
+    $result = $db[$found][$returnValue];
 
-    if ( $found ){
-        return $found;
-    }else {
-        return "Not found";
-    }
+    return $result;
+
 
     
 }
