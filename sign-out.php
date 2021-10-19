@@ -1,4 +1,8 @@
 <?php
-// Utloggning. Töm sessionen på data innan du slussar vidare dom till start-
-// eller inloggningssidan.
+
+unset($_SESSION);
+session_destroy();
+header("location: index.php");
+exit();
+
 ?>
