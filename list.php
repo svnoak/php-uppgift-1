@@ -1,7 +1,7 @@
 <?php
 include_once "includes/header.php";
 
-$dogs = getDB("dogs");
+$dogs = getFile("db.json")["dogs"];
 $links = ['name'=>'id', 'breed'=>'breed'];
 $headers = ['name', 'breed', 'age', 'notes', 'owner'];
 

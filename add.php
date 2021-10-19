@@ -11,7 +11,7 @@ if( isset($_POST['add-dog']) ){
             'name'=>$_POST['name'],
             'breed'=>$_POST['breed'],
             'age'=>$_POST['age'],
-            'note'=>$_POST['note'],
+            'notes'=>$_POST['notes'],
             'owner'=>$_SESSION['userID']
         ];
         addToDB($data, "dogs");
@@ -25,7 +25,7 @@ if( isset($_POST['add-dog']) ){
         <input type="text" name="name" placeholder="Name">
         <input type="text" name="breed" placeholder="Breed">
         <input type="number" name="age" placeholder="Age">
-        <input type="textare" name="note" placeholder="Note">
+        <input type="textare" name="notes" placeholder="Notes">
         <button name="add-dog">Add</button>
     </form>
 </section>

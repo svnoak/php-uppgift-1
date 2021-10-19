@@ -1,12 +1,8 @@
 <?php
 
-function getDB($arg){
-    $json = json_decode(file_get_contents("db.json"), true);
-    if($arg == "all"){
-        return $json;
-    }else{
-        return $json[$arg];
-    }
+function getfile($file){
+    $data = json_decode(file_get_contents($file), true);
+    return $data;
 }
 
 function createTable($array, $headers, $links, $action){
@@ -60,7 +56,8 @@ function isURI($URI){
 }
 
 function findInDB($searchArg, $dbarg, $searchKey, $returnValue){
-    $db = getDB($dbarg);
+    $file = getFile("db.json");
+    $db = $file[$dbarg];
     $found = columnSearch($searchArg, $db, $searchKey, $dbarg);
     if( $returnValue == false ){
         return $found;
@@ -69,16 +66,17 @@ function findInDB($searchArg, $dbarg, $searchKey, $returnValue){
     }
 }
 
-function replaceInDB( $searchArg, $dbarg, $searchKey, $returnValue ){
-    $db = getDB("all");
+function deleteInDB( $searchArg, $dbarg, $searchKey, $returnValue ){
+    $file = getFile("db.json");
+    $db = $file[$dbarg];
     $index = columnSearch($searchArg, $db, $searchKey, $dbarg);
-    unset($db[$dbarg][$index]);
+    unset($db[$index]);
     file_put_contents( "db.json", json_encode($db) );
     return $index;
 }
 
 function columnSearch($searchArg, $db, $searchKey, $dbarg,){
-    $column = array_column($db[$dbarg], $searchKey);
+    $column = array_column($db, $searchKey);
     $found = array_search($searchArg, $column);
     return $found;
 }
@@ -88,7 +86,7 @@ function getMax($db,$key){
 }
 
 function addToDB($data, $dbarg ){
-    $db = getDB("all");
+    $db = getFile("db.json");
     $data['id'] = getMax($db[$dbarg], "id")+1;
     array_push($db[$dbarg], $data);
     file_put_contents("db.json", json_encode($db,JSON_PRETTY_PRINT));
