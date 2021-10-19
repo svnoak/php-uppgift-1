@@ -10,11 +10,13 @@ if( isset($_POST['signin']) ){
         $email = $_POST['email'];
         $password = $_POST['password'];
         $users = getDB("users");
-
         foreach( $users as $user ){
             if( $user['email'] == $email ){
                 if( $user['password'] == $password){
                     $_SESSION['isLoggedIn'] = true;
+                    $_SESSION['username'] = $user['username'];
+                    $_SESSION['userID'] = $user['id'];
+                    $_SESSION['email'] = $user['email'];
                     header("location: /profile.php");
                     exit();
                 }else{

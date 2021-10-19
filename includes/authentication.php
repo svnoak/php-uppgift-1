@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if( $_SERVER['REQUEST_URI'] == "/profile.php"  ){
+if( $_SERVER['REQUEST_URI'] == "/profile.php" || $_SERVER['REQUEST_URI'] == "/add.php" ){
     if( !isset($_SESSION['isLoggedIn']) ){
         if( !$_SESSION['isLoggedIn'] ){
             $_SESSION['status'] = "Please log in to access this page";

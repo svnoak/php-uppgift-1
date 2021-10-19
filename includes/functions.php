@@ -83,4 +83,15 @@ function columnSearch($searchArg, $db, $searchKey, $dbarg,){
     return $found;
 }
 
+function getMax($db,$key){
+    return max(array_column($db, $key));
+}
+
+function addToDB($data, $dbarg ){
+    $db = getDB("all");
+    $data['id'] = getMax($db[$dbarg], "id")+1;
+    array_push($db[$dbarg], $data);
+    file_put_contents("db.json", json_encode($db,JSON_PRETTY_PRINT));
+}
+
 ?>
