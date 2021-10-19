@@ -45,7 +45,6 @@ function createTableRows($array, $links, $headers, $action){
     return $rows;
     
 }
-    
 
 function isURI($URI){
     return $_SERVER['REQUEST_URI'] == "/$URI.php";
