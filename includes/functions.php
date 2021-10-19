@@ -1,6 +1,6 @@
 <?php
 
-function getfile($file){
+function getFile($file){
     $data = json_decode(file_get_contents($file), true);
     return $data;
 }
@@ -69,10 +69,10 @@ function findInDB($searchArg, $dbarg, $searchKey, $returnValue){
 function deleteInDB( $searchArg, $dbarg, $searchKey, $returnValue ){
     $file = getFile("db.json");
     $db = $file[$dbarg];
+
     $index = columnSearch($searchArg, $db, $searchKey, $dbarg);
-    unset($db[$index]);
-    file_put_contents( "db.json", json_encode($db) );
-    return $index;
+    unset($file[$dbarg][$index]);
+    file_put_contents( "db.json", json_encode($file) );
 }
 
 function columnSearch($searchArg, $db, $searchKey, $dbarg,){

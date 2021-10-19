@@ -9,7 +9,7 @@ if( isset($_POST['signin']) ){
     if( strlen($_POST['email']) && strlen($_POST['password']) ){
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $users = getDB("users");
+        $users = getFile("db.json")["users"];
         foreach( $users as $user ){
             if( $user['email'] == $email ){
                 if( $user['password'] == $password){
