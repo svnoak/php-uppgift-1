@@ -2,15 +2,23 @@
 
 function getDB($arg){
     $json = json_decode(file_get_contents("db.json"), true);
-    return $json[$arg];
+    if($arg == "all"){
+        return $json;
+    }else{
+        return $json[$arg];
+    }
 }
 
 function createTable($array, $headers, $links, $action){
-    $htmlTable = "<table>";
-    $htmlTable .= createTableHead($headers, $action);
-    $htmlTable .= createTableRows($array, $links, $headers, $action);
-    $htmlTable .= "</table>";
-    return $htmlTable;
+    if( count($array) > 0 ){
+        $htmlTable = "<table>";
+        $htmlTable .= createTableHead($headers, $action);
+        $htmlTable .= createTableRows($array, $links, $headers, $action);
+        $htmlTable .= "</table>";
+        return $htmlTable;
+    }else{
+        echo "<p>You don't own any dogs. Do you want to <a href='add.php'>add dogs</a>?</p>";
+    }
 }
 
 function createTableHead($headers, $action){
@@ -39,13 +47,12 @@ function createTableRows($array, $links, $headers, $action){
                     }
             }
         }
-        if( $action ) $row .= "<td><a href='delete.php'>Delete</a></td>";
+        if( $action ) $row .= "<td><a href='delete.php?id=$items[id]'>Delete</a></td>";
         $row .= "</tr>";
         $rows .= $row;
     }
     $rows .= "</tbody>";
     return $rows;
-    
 }
 
 function isURI($URI){
@@ -54,14 +61,26 @@ function isURI($URI){
 
 function findInDB($searchArg, $dbarg, $searchKey, $returnValue){
     $db = getDB($dbarg);
-    $column = array_column($db, $searchKey);
+    $found = columnSearch($searchArg, $db, $searchKey, $dbarg);
+    if( $returnValue == false ){
+        return $found;
+    }else{
+        return $db[$found][$returnValue];
+    }
+}
+
+function replaceInDB( $searchArg, $dbarg, $searchKey, $returnValue ){
+    $db = getDB("all");
+    $index = columnSearch($searchArg, $db, $searchKey, $dbarg);
+    unset($db[$dbarg][$index]);
+    file_put_contents( "db.json", json_encode($db) );
+    return $index;
+}
+
+function columnSearch($searchArg, $db, $searchKey, $dbarg,){
+    $column = array_column($db[$dbarg], $searchKey);
     $found = array_search($searchArg, $column);
-    $result = $db[$found][$returnValue];
-
-    return $result;
-
-
-    
+    return $found;
 }
 
 ?>
