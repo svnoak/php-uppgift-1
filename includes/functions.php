@@ -5,47 +5,47 @@ function getDB($arr){
     return $json[$arr];
 }
 
-function createTable($array){
-    $profilePage = isURI("profile");
-    $keys = array_keys($array[0]);
-    $keys = array_diff($keys, array("id"));
-    if ( $profilePage ) {
-        $keys = array_diff($keys, array("owner"));
-        $keys .= "Action";
-    }
+function createTable($array, $headers, $links, $action){
     $htmlTable = "<table>";
-    $htmlTable .= createTableHead($keys);
-    foreach( $array as $items ) {
-        $htmlTable .= createTableRow($items, $keys, $profilePage);
-        };
+    $htmlTable .= createTableHead($headers, $action);
+    $htmlTable .= createTableRows($array, $links, $headers, $action);
     $htmlTable .= "</table>";
     return $htmlTable;
 }
 
-function createTableHead($keys){
-    $tableHead = "<tr>";
-    foreach( $keys as $key ){
-            $tableHead .= "<th>" . $key . "</th>";
+function createTableHead($headers, $action){
+    $tableHead = "<thead><tr>";
+    foreach( $headers as $title ){
+            $tableHead .= "<th>" . $title . "</th>";
     }
-    $tableHead .= "</tr>";
+    if ( $action ) $tableHead .= "<th>" . "action" . "</th>";
+    $tableHead .= "</tr></thead>";
     return  $tableHead;
 }
 
-function createTableRow($items, $keys, $profilePage){
-    $row = "<tr>";
-    foreach( $keys as $key ){
-        $item = $items[$key];
-            if( $key == "name" ){
-                $row .= "<td><a href='?id=$items[id]'>$item</a></td>";
-            } elseif( !$profilePage && $key == "breed" ){
-                $row .= "<td><a href='?breed=$item'>$item</a></td>";
-            } else {
-                $row .= "<td>$item</td>";
+function createTableRows($array, $links, $headers, $action){
+    $rows = "<tbody>";
+    foreach( $array as $items ) {
+        $row = "<tr>";
+        foreach( $items as $key=>$item ){
+            if( in_array( $key, $headers ) ){
+                if( array_key_exists( $key, $links ) ){
+                    $i = $links[$key];
+                    $row .= "<td><a href=?$i=$items[$i]>$item</a></td>";
+                }else{
+                    $row .= "<td>$item</td>";
+                    }
             }
+        }
+        if( $action ) $row .= "<td><a href='delete.php'>Delete</a></td>";
+        $row .= "</tr>";
+        $rows .= $row;
     }
-    $row .= "</tr>";
-    return $row;
+    $rows .= "</tbody>";
+    return $rows;
+    
 }
+    
 
 function isURI($URI){
     return $_SERVER['REQUEST_URI'] == "/$URI.php";
