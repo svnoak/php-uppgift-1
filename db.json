@@ -5,6 +5,18 @@
             "email": "sebbe@demo.se",
             "username": "sebbe",
             "password": "1234"
+        },
+        {
+            "id": 2,
+            "email": "erik@demo.se",
+            "username": "erik",
+            "password": "1234"
+        },
+        {
+            "id": 3,
+            "email": "kim@demo.se",
+            "username": "kim",
+            "password": "1234"
         }
     ],
     "dogs": [

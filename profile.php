@@ -7,7 +7,7 @@ $headers = ['name', 'breed', 'age', 'notes'];
 
 ?>
 <section>
-    <h1>Dogs</h1>   
+    <h1>Dogs</h1>
     <?php echo createTable($dogs, $headers, $links, true) ?>
 </section>
 <?php

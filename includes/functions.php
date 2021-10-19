@@ -1,8 +1,8 @@
 <?php
 
-function getDB($arr){
+function getDB($arg){
     $json = json_decode(file_get_contents("db.json"), true);
-    return $json[$arr];
+    return $json[$arg];
 }
 
 function createTable($array, $headers, $links, $action){
@@ -48,6 +48,20 @@ function createTableRows($array, $links, $headers, $action){
 
 function isURI($URI){
     return $_SERVER['REQUEST_URI'] == "/$URI.php";
+}
+
+function findInDB($searchArg, $dbarg, $key){
+    $db = getDB($dbarg);
+    $column = array_column($db, $key);
+    $found = array_search($searchArg, $column);
+
+    if ( $found ){
+        return $found;
+    }else {
+        return "Not found";
+    }
+
+    
 }
 
 ?>
