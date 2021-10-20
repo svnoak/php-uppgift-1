@@ -1,9 +1,10 @@
 <?php
 require_once "includes/header.php";
 
-if( !sessionError() ){
+// Behöver jag denna?
+/* if( !sessionError() ){
     session_unset();
-}
+} */
 
 if( isset($_POST['add-dog']) ){
     if( strlen($_POST['name']) && strlen($_POST['breed']) && strlen($_POST['age']) ){

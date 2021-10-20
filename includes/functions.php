@@ -60,11 +60,11 @@ function isURI($URI){
 function findInDB($searchArg, $dbarg, $searchKey, $returnValue){
     $file = getFile("db.json");
     $db = $file[$dbarg];
-    $found = columnSearch($searchArg, $db, $searchKey, $dbarg);
+    $index = columnSearch($searchArg, $db, $searchKey, $dbarg);
     if( $returnValue == false ){
-        return $found;
+        return $db[$index];
     }else{
-        return $db[$found][$returnValue];
+        return $db[$index][$returnValue];
     }
 }
 
