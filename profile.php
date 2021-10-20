@@ -1,6 +1,7 @@
 <?php
 include_once "includes/header.php";
 
+/* Grejer som ska in i tabellen */
 $dogs = getFile("db.json")["dogs"];
 $links = [
     'name'=>

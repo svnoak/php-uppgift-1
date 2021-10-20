@@ -83,6 +83,6 @@ table > thead{
     background-color: lightgrey;
 }
 
-table tbody tr:nth-child(2){
+table tbody tr:nth-child(even){
     background-color: lightgrey;
 }

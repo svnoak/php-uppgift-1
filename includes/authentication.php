@@ -1,7 +1,10 @@
 <?php
+require_once "functions.php";
+
 session_start();
 
-if( $_SERVER['REQUEST_URI'] == "/profile.php" || $_SERVER['REQUEST_URI'] == "/add.php" ){
+// Kollar om användaren är inloggad och slänger annars ut den.
+if( isPage("profile") || isPage("add") || isPage("delete") ){
     if( !isset($_SESSION['isLoggedIn']) ){
         if( !$_SESSION['isLoggedIn'] ){
             $_SESSION['status'] = "Please log in to access this page";
@@ -10,30 +13,6 @@ if( $_SERVER['REQUEST_URI'] == "/profile.php" || $_SERVER['REQUEST_URI'] == "/ad
             session_destroy();
             exit();
         }
-    }
-}
-
-function isLoggedIn(){
-    if( isset($_SESSION['isLoggedIn']) ){
-        return $_SESSION['isLoggedIn'];
-    } else{
-        return false;
-    }
-}
-
-function setSessionStatus($statusMessage){
-    $_SESSION['status']  = $statusMessage;
-}
-
-function echoSessionStatus(){
-    if( isset($_SESSION['status']) ){
-        echo "<p>" . $_SESSION['status'] . "</p>";
-    }
-}
-
-function sessionError(){
-    if( isset($_SESSION['error']) ){
-       return $_SESSION['error'];
     }
 }
 ?>

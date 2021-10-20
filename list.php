@@ -1,6 +1,8 @@
 <?php
 include_once "includes/header.php";
 
+
+// Alla delar som skall in i Table.
 $allDogs = getFile("db.json")["dogs"];
 $links = [
     'name'=>[
@@ -14,6 +16,7 @@ $links = [
     ];
 $headers = ['name', 'breed', 'age', 'notes', 'owner'];
 
+// Kollar om det finns en breed eller inte.
 if( isset($_GET['breed']) ){
     if($_GET['breed']){
         $breed = URLToParam($_GET['breed']);
