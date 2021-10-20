@@ -43,6 +43,14 @@
             "notes": "Bulldozer Pelle",
             "owner": 1,
             "id": 3
+        },
+        {
+            "name": "Niklas",
+            "breed": "Corgi",
+            "age": "2",
+            "notes": "Some notes",
+            "owner": 2,
+            "id": 4
         }
     ]
 }
