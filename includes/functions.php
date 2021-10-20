@@ -13,7 +13,7 @@ function createTable($array, $headers, $links, $action){
         $htmlTable .= "</table>";
         return $htmlTable;
     }else{
-        echo "<p>You don't own any dogs. Do you want to <a href='add.php'>add dogs</a>?</p>";
+        echo "<p>There are no dogs. Do you want to <a href='add.php'>add a dog</a>?</p>";
     }
 }
 
@@ -27,6 +27,16 @@ function createTableHead($headers, $action){
     return  $tableHead;
 }
 
+function paramToURL($param){
+    $param = str_replace(" ","+", $param);
+    return $param;
+}
+
+function URLToParam($param){
+    $param = str_replace("+"," ", $param);
+    return $param;
+}
+
 function createTableRows($array, $links, $headers, $action){
     $rows = "<tbody>";
     foreach( $array as $items ) {
@@ -37,7 +47,8 @@ function createTableRows($array, $links, $headers, $action){
                     $i = $links[$key];
                     $page = $i['page'];
                     $param = $i['param'];
-                    $row .= "<td><a href=$page.php?$param=$items[$param]>$item</a></td>";
+                    $itemsParam = paramToURL($items[$param]);
+                    $row .= "<td><a href=$page.php?$param=$itemsParam>$item</a></td>";
                 }elseif( $key == "owner") {
                     $row .= "<td>" . findInDB($item, "users", "id", "username") . "</td>";
                     }else{
@@ -92,6 +103,13 @@ function addToDB($data, $dbarg ){
     $data['id'] = getMax($db[$dbarg], "id")+1;
     array_push($db[$dbarg], $data);
     file_put_contents("db.json", json_encode($db,JSON_PRETTY_PRINT));
+}
+
+function filterData($array, $filterKey, $filterBy){
+    $filteredArray = array_filter($array, function($item) use($filterKey, $filterBy){
+        return $item[$filterKey] == $filterBy;
+    });
+    return $filteredArray;
 }
 
 ?>

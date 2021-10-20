@@ -2,13 +2,17 @@
 include_once "includes/header.php";
 
 $dogs = getFile("db.json")["dogs"];
-$links = ['name'=>'id'];
+$links = [
+    'name'=>
+    [
+        'page'=>'/show', 
+        'param'=>'id'
+    ]
+    ];
 $headers = ['name', 'breed', 'age', 'notes'];
+$userID = $_SESSION['userID'];
 
-$userDogs = array_filter($dogs, function($dog){
-    $userID = $_SESSION['userID'];
-    return $dog['owner'] == $userID;
-});
+$userDogs = filterData($dogs, "owner", $userID);
 
 ?>
 <section>
