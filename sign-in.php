@@ -1,9 +1,7 @@
 <?php
 include_once "includes/header.php";
 
-if( !sessionError() ){
-    session_unset();
-}
+if( isLoggedIn() ) header('Location: /list.php');
 
 if( isset($_POST['signin']) ){
     if( strlen($_POST['email']) && strlen($_POST['password']) ){

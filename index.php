@@ -1,13 +1,11 @@
 <?php
 include_once "includes/header.php";
 ?>
-<section class="header">
-
+<section class="header flex-left">
 
     <?php if( isLoggedIn() ) { ?>
         <div class="background">
-            <h1>Welcome <?php $_SESSION['username'] ?>, to IDDb!</h1>
-            <p><a href="/list.php">Check out all the cute dogs</a> or <a href="/add.php">add some more</a>!</p>
+            <h1>Welcome <?php echo $_SESSION['username'] ?></h1>
         </div>
         <?php }else { ?>
         <div class="background">

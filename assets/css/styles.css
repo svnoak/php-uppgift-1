@@ -1,7 +1,3 @@
-:root{
-    --selector-position: -30vw;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -72,11 +68,11 @@ nav ul li a{
 
 .nav-item#nav-profile:hover~#selector,
 .nav-item:nth-child(4).active~#selector{
-    left: calc(var(--selector-position) + 20vw);
+    left: calc(var(--selector-position) + 30vw);
 }
 
 .nav-item:nth-child(5):hover~#selector{
-    left: calc(var(--selector-position) + 30vw);
+    left: calc(var(--selector-position) + 40vw);
 }
 
 .nav-item#nav-signin:hover~#selector,
@@ -115,10 +111,25 @@ section{
     width: 100%;
 }
 
+section h1{
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+section p{
+    font-size: 20px;
+}
+
+.flex-left{
+    align-items: flex-start;
+}
+
 .background{
     background-color: rgba(0,0,0,0.5);
     padding: 5vh;
     border-radius: 5px;
+    width: 30%;
+    margin: 5vh;
 }
 
 table{
