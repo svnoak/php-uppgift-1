@@ -28,14 +28,16 @@ if( isset($_POST['signin']) ){
 }
 
 ?>
-<section>
-    <h1>Sign in to your account</h1>
-    <?php echoSessionStatus() ?>
-    <form action="/sign-in.php" method="POST">
-        <input type="email" name="email" id="email" placeholder="Email">
-        <input type="password" name="password" id="password" placeholder="Password">
-        <button name="signin">Sign in</button>
-    </form>
+<section class="header flex-left">
+    <div class="background">
+        <?php echoSessionStatus() ?>
+        <form action="/sign-in.php" method="POST">
+        <h1>Sign in</h1>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button name="signin">Sign in</button>
+        </form>
+    </div>
 </section>
 <?php
 include_once "includes/footer.php";
