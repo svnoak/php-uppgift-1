@@ -1,6 +1,10 @@
 <?php
 require_once "authentication.php";
 require_once "functions.php";
+
+function isActive($page){
+    if(isPage($page)) echo "active";
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,28 +18,28 @@ require_once "functions.php";
 </head>
 <body>
     <nav>
-    <div class="header">The Internet Dog Database</div>
         <ul>
-            <li>
+            <li id="nav-home" class="nav-item <?php isActive("index") ?>">
                 <a href="/index.php">Home</a>
             </li>
-            <li>
+            <li id="nav-list" class="nav-item <?php isActive("list") ?>">
                 <a href="/list.php">Dogs</a>
             </li>
             <?php  if( isLoggedIn() ){ ?>
-                <li>
+                <li id="nav-add" class="nav-item <?php isActive("add") ?>">
                 <a href="/add.php">Add</a>
             </li>
-            <li>
+            <li id="nav-profile" class="nav-item <?php isActive("profile") ?>">
                 <a href="/profile.php">Profile</a>
             </li>
-            <li>
+            <li id="nav-signout" class="nav-item <?php isActive("sign-out") ?>">
                 <a href="/sign-out.php">Sign out</a>
             </li>
             <?php }else{ ?>
-            <li>
+            <li id="nav-signin" class="nav-item <?php isActive("sign-in") ?>">
                 <a href="/sign-in.php">Sign in</a>
             </li>
             <?php } ?>
+            <div id="selector"></div>
         </ul>
     </nav>

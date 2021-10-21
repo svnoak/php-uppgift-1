@@ -123,7 +123,12 @@ function URLToParam($param){
 
 // Kollar om användaren är på respektive sida.
 function isPage($page){
-    return $_SERVER['REQUEST_URI'] == "/$page.php";
+    if($page == "index" || $page == "/" ){
+        return $_SERVER['REQUEST_URI'] == "/index.php" || $_SERVER['REQUEST_URI'] == "/";
+    }
+    else{
+        return $_SERVER['REQUEST_URI'] == "/$page.php";
+    }
 }
 
 

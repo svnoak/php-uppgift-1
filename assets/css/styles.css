@@ -1,3 +1,7 @@
+:root{
+    --selector-position: -30vw;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -14,62 +18,107 @@ body{
 
 nav,
 footer {
-    width: 80vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 10vh;
+    background-color: black;
+    color: white;
 }
 
-nav{
-    margin-top: 1vh;
-    border-bottom: 1px solid rgba(0,0,0,0.5);
-}
-
-footer{
-    height: 100px;
-    border-top: 1px solid rgba(0,0,0,0.5);
-}
-
-nav ul {
-    height: 50px;
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-nav ul li{
+nav ul{
+    display: flex;
     list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li{
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 nav ul li a{
-    padding: 0 1vw;
-    margin: 0 1vw;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
+.nav-item#nav-home:hover~#selector,
+.nav-item:first-child.active~#selector{
+    left: var(--selector-position);
+}
+
+.nav-item#nav-list:hover~#selector,
+.nav-item:nth-child(2).active~#selector{
+    left: calc(var(--selector-position) + 10vw);
+}
+
+.nav-item#nav-add:hover~#selector,
+.nav-item:nth-child(3).active~#selector{
+    left: calc(var(--selector-position) + 20vw);
+}
+
+.nav-item#nav-profile:hover~#selector,
+.nav-item:nth-child(4).active~#selector{
+    left: calc(var(--selector-position) + 20vw);
+}
+
+.nav-item:nth-child(5):hover~#selector{
+    left: calc(var(--selector-position) + 30vw);
+}
+
+.nav-item#nav-signin:hover~#selector,
+.nav-item:nth-child(3).active~#selector{
+    left: calc(var(--selector-position) + 20vw);
+}
+
+#selector{
+    position: relative;
+    left: var(--selector-position);
+    top: 30px;
+    height: 2px;
+    width: 10vw;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
 .header{
-    height: 300px;
-    background-image: url("/assets/images/header.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 80vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 40px;
+    background-image: url("/assets/images/header.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 section{
-    margin-top: 1vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
+}
+
+.background{
+    background-color: rgba(0,0,0,0.5);
+    padding: 5vh;
+    border-radius: 5px;
 }
 
 table{
@@ -83,6 +132,6 @@ table > thead{
     background-color: lightgrey;
 }
 
-table tbody tr:nth-child(even){
+table tbody tr:nth-child(2){
     background-color: lightgrey;
 }
