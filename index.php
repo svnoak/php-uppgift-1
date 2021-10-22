@@ -1,14 +1,14 @@
 <?php
 include_once "includes/header.php";
 ?>
-<section class="header flex-left">
+<section class="header flex-left bg-image">
 
     <?php if( isLoggedIn() ) { ?>
-        <div class="background">
+        <div class="bg bg-dark">
             <h1>Welcome <?php echo $_SESSION['username'] ?></h1>
         </div>
         <?php }else { ?>
-        <div class="background">
+        <div class="bg bg-dark">
             <h1>Welcome to IDDb!</h1>
             <p>You can <a href="/sign-in.php">Sign in</a> or <a href="/list.php">List all of the dogs</a>.</p>
         </div>

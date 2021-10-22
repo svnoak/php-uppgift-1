@@ -30,11 +30,14 @@ if( isset($_POST['signin']) ){
 ?>
 <section class="header flex-left">
     <div class="background">
-        <?php echoSessionStatus() ?>
         <form action="/sign-in.php" method="POST">
         <h1>Sign in</h1>
             <input type="email" name="email" id="email" placeholder="Email">
             <input type="password" name="password" id="password" placeholder="Password">
+            <?php 
+            echoSessionStatus();
+            session_unset();
+            ?>
             <button name="signin">Sign in</button>
         </form>
     </div>

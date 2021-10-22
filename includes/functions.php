@@ -23,7 +23,7 @@ function setSessionStatus($statusMessage){
 // skriver ut session status om någon sådan finns.
 function echoSessionStatus(){
     if( isset($_SESSION['status']) ){
-        echo "<p>" . $_SESSION['status'] . "</p>";
+        echo "<p class='alert'>" . $_SESSION['status'] . "</p>";
     }
 }
 
@@ -51,7 +51,7 @@ $action == om tabellen ska ha en delete action eller inte.
 */
 function createTable($array, $headers, $links, $action){
     if( count($array) > 0 ){
-        $htmlTable = "<table>";
+        $htmlTable = "<table class='styled-table'>";
         $htmlTable .= createTableHead($headers, $action);
         $htmlTable .= createTableRows($array, $links, $headers, $action);
         $htmlTable .= "</table>";
