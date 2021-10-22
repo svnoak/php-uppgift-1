@@ -165,7 +165,7 @@ function findInDB($searchArg, $dbarg, $searchKey, $returnValue){
             return $db[$index][$returnValue];
         }
     }else{
-        setSessionStatus("404 - Dog ran away");
+        setSessionStatus("<div class='bg-image no-dog-bg'><span>This is not the dog you are looking for</span></div>");
     }
 }
 
