@@ -28,14 +28,14 @@ function isActive($page){
                 <a href="/index.php">Home</a>
             </li>
             <li id="nav-list" class="nav-item <?php isActive("list") ?>">
-                <a href="/list.php">Dogs</a>
+                <a href="/list.php">Doggos</a>
             </li>
             <?php  if( isLoggedIn() ){ ?>
                 <li id="nav-add" class="nav-item <?php isActive("add") ?>">
                 <a href="/add.php">Add</a>
             </li>
             <li id="nav-profile" class="nav-item <?php isActive("profile") ?>">
-                <a href="/profile.php">Profile</a>
+                <a href="/profile.php">Back yard</a>
             </li>
             <li id="nav-signout" class="nav-item <?php isActive("sign-out") ?>">
                 <a href="/sign-out.php">Sign out</a>
