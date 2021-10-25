@@ -21,13 +21,13 @@ if( isset($_GET['breed']) ){
     if($_GET['breed']){
         $breed = URLToParam($_GET['breed']);
         $allDogs = filterData($allDogs, "breed", $breed );
-        $info = "<span>Filtered by $breed || <a href='/list.php'>Show all doggos</a></span>";
+        $info = "<span class='alert'>Filtered by $breed || <a href='/list.php'>Show all doggos</a></span>";
     }
 }
 
 ?>
 <section>
-    <h1>Dogs</h1>
+    <h1>Doggos</h1>
     <?php
         if(isset($_GET['breed'])) echo $info;
      echo createTable($allDogs, $headers, $links, false) ?>

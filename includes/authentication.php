@@ -9,7 +9,6 @@ if( isPage("profile") || isPage("add") || isPage("delete") ){
         $_SESSION['status'] = "Please log in to access this page";
         $_SESSION['error'] = 401;
         header("location: /sign-in.php");
-        session_destroy();
         exit();
     }
 }

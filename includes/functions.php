@@ -206,4 +206,49 @@ function filterData($array, $filterKey, $filterBy){
     return $filteredArray;
 }
 
+/*
+
+DIALOGER
+
+*/
+
+function cleanPageName($page){
+    $name = explode(".",$page);
+    $name = explode("/",$name[0]);
+    echo $name[1];
+}
+
+function setBgImage(){
+    $page = $_SERVER['PHP_SELF'];
+    if( $page == "/" || $page == "/index.php" ){
+        if( isLoggedIn() ){
+            echo "house-bg";
+        }
+        echo "home-bg";
+    }else{
+       echo cleanPageName($page)."-bg";
+    }
+};
+
+function dialogOptions($dialog){
+    if(isset($_GET['dialog'])){
+        $level = $_GET['dialog'];
+            echo $dialog[$level];
+    }else{
+        echo $dialog[0];
+    }
+}
+
+function chooseGuide(){
+    if( !isset($_SESSION['guide'])) {
+    $names = ["Jörgen", "Lennart", "Bob"];
+    $index = array_rand($names);
+    $guide = $names[$index];
+    $_SESSION['guide'] = $guide;
+    return $guide;
+    }else{
+        return $_SESSION['guide'];
+    }
+}
+
 ?>

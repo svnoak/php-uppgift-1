@@ -28,19 +28,23 @@ if( isset($_POST['signin']) ){
 }
 
 ?>
-<section class="header flex-left">
-    <div class="background">
-        <form action="/sign-in.php" method="POST">
+<section class="<?php setBgImage(); ?>">
+        <form action="/sign-in.php" method="POST" class="bg">
         <h1>Sign in</h1>
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="password" id="password" placeholder="Password">
+        <div>
+            <input type="text" name="email" id="email" class="inputText" required/>
+            <label for="email" class="floating-label">Email</label>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" class="inputText" required/>
+            <label for="password" class="floating-label">Password</label>
+        </div>
             <?php 
             echoSessionStatus();
             session_unset();
             ?>
             <button name="signin">Sign in</button>
         </form>
-    </div>
 </section>
 <?php
 include_once "includes/footer.php";

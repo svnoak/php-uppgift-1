@@ -12,17 +12,12 @@ function isActive($page){
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php if( isLoggedIn() ) { ?>
-        <link rel="stylesheet" href="/assets/css/log-nav.css">
-    <?php } else{ ?>
-        <link rel="stylesheet" href="/assets/css/nav.css">
-    <?php } ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/assets/css/styles.css">
     <title>IDDb</title>
 </head>
 <body>
-    <nav>
+<!--     <nav>
         <ul>
             <li id="nav-home" class="nav-item <?php isActive("index") ?>">
                 <a href="/index.php">Home</a>
@@ -35,7 +30,7 @@ function isActive($page){
                 <a href="/add.php">Add</a>
             </li>
             <li id="nav-profile" class="nav-item <?php isActive("profile") ?>">
-                <a href="/profile.php">Back yard</a>
+                <a href="/profile.php">Backyard</a>
             </li>
             <li id="nav-signout" class="nav-item <?php isActive("sign-out") ?>">
                 <a href="/sign-out.php">Sign out</a>
@@ -47,4 +42,4 @@ function isActive($page){
             <?php } ?>
             <div id="selector"></div>
         </ul>
-    </nav>
+    </nav> -->
