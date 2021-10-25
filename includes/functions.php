@@ -232,6 +232,7 @@ function setBgImage(){
 
 function dialogOptions($dialog){
     if(isset($_GET['dialog'])){
+        if( isset($_GET['started']) ) $_SESSION['dialogStarted'] = true;
         if( (int)$_GET['dialog'] ){
             $level = $_GET['dialog'];
             echo $dialog[$level];

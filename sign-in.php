@@ -27,24 +27,53 @@ if( isset($_POST['signin']) ){
     }
 }
 
-?>
-<section class="<?php setBgImage(); ?>">
-        <form action="/sign-in.php" method="POST" class="bg">
+$dialog_0 = "
+<div class='speechbubble-home'>
+<img src='/assets/images/speech_top.png'>
+        <div class='content'>
+            <div class='paragraphs'>
+                <p class='dialog'>Where did I put my keys?</p>
+                <p class='dialog'>...</p>
+                <p class='dialog'>...</p>
+                <p class='dialog'>There they are!</p>
+            </div>
+            <div class='continue'>
+                <a href='?dialog=1'>Continue</a>
+            </div>
+        </div>
+        <img src='/assets/images/speech_bottom.png'>
+</div>
+";
+
+$dialog_1 ="
+<div class='scroll-signin'>
+    <img src='/assets/images/scrolls_top.png'>
+        <form action='/sign-in.php' method='POST' class='content'>
         <h1>Sign in</h1>
-        <div>
-            <input type="text" name="email" id="email" class="inputText" required/>
-            <label for="email" class="floating-label">Email</label>
+        <div class='input'>
+            <label for='email'>Email</label>
+            <input type='text' name='email' id='email'required/>
         </div>
-        <div>
-            <input type="password" name="password" id="password" class="inputText" required/>
-            <label for="password" class="floating-label">Password</label>
+        <div class='input'>
+            <label for='password'>Password</label>
+            <input type='password' name='password' id='password'required/>
         </div>
-            <?php 
+            <?php
             echoSessionStatus();
             session_unset();
             ?>
-            <button name="signin">Sign in</button>
+            <button name='signin'>Sign in</button>
         </form>
+        <img src='/assets/images/scrolls_bottom.png'>
+    </div>
+";
+
+$dialog = [$dialog_0, $dialog_1];
+
+
+?>
+<section class="<?php setBgImage(); ?>">
+<?php dialogOptions($dialog); ?>    
 </section>
 <?php
 include_once "includes/footer.php";
