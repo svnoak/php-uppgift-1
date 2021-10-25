@@ -1,6 +1,6 @@
 <?php
 require_once "functions.php";
-
+session_set_cookie_params(0);
 session_start();
 
 // Kollar om användaren är inloggad och slänger annars ut den.

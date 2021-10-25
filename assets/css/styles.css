@@ -45,8 +45,10 @@ section {
 	left: 100px;
 }
 
-.speechbubble-home img{
+.speechbubble-home img,
+.scroll-home img{
     width: 100%;
+    margin: -5px 0;
 }
 
 .speechbubble-home > .content{
@@ -129,10 +131,6 @@ section {
 	left: 150px;
 }
 
-.scroll-home img{
-    width: 100%;
-}
-
 .scroll-home > .content{
     display: flex;
     flex-direction: column;
@@ -154,7 +152,19 @@ section {
     align-items: flex-start;
 }
 
+.dissapear{
+    opacity: 1;
+    animation: dissapear;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
 @keyframes bopping {
     0%   {top: 5px;}
     100%  {top: 0px;}
+  }
+
+  @keyframes dissapear {
+      from { opacity: 1; }
+      to { opacity: 0; }
   }

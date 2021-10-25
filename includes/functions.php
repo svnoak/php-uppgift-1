@@ -232,22 +232,26 @@ function setBgImage(){
 
 function dialogOptions($dialog){
     if(isset($_GET['dialog'])){
-        $level = $_GET['dialog'];
+        if( (int)$_GET['dialog'] ){
+            $level = $_GET['dialog'];
             echo $dialog[$level];
-    }else{
-        echo $dialog[0];
+        }else{
+            return null;
+        }
+        }else{
+            echo $dialog[0];
     }
 }
 
-function chooseGuide(){
-    if( !isset($_SESSION['guide'])) {
+function chooseNeighbour(){
+    if( !isset($_SESSION['neighbour'])) {
     $names = ["Jörgen", "Lennart", "Bob"];
     $index = array_rand($names);
-    $guide = $names[$index];
-    $_SESSION['guide'] = $guide;
-    return $guide;
+    $neighbour = $names[$index];
+    $_SESSION['neighbour'] = $neighbour;
+    return $neighbour;
     }else{
-        return $_SESSION['guide'];
+        return $_SESSION['neighbour'];
     }
 }
 

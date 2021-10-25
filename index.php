@@ -1,7 +1,7 @@
 <?php
 include_once "includes/header.php";
 
-$guide = chooseGuide();
+$neighbour = chooseNeighbour();
 
 $welcomeMessage = "
 <div class='scroll-home'>
@@ -25,10 +25,10 @@ $dialog_1 = "
         <img src='/assets/images/speech_top.png' alt=''>
         <div class='content'>
             <div class='paragraphs'>
-                <p>Hej, my name is $guide.</p>
-                <p>I'm your guide today.</p>
+                <p>Hej there! My name is $neighbour.</p>
+                <p>Always happy to see a new face.</p>
                 <p>...</p>
-                <p>There's a lot we can do!</p>
+                <p>Do you want to hang out?!</p>
             </div>
             <div class='continue'>
                 <a href='?dialog=2'>Continue</a>
@@ -43,7 +43,7 @@ $dialog_2 = "
         <img src='/assets/images/speech_top.png' alt=''>
         <div class='content'>
             <div class='paragraphs'>
-                <p>Sounds like fun!</p>
+                <p>Sure, sounds like fun!</p>
                 <a class='dialog-option active' href='?dialog=3'>What do you suggest?</a>
             </div>
         </div>
@@ -56,9 +56,8 @@ $dialog_3 = "
         <img src='/assets/images/speech_top.png' alt=''>
         <div class='content'>
             <div class='paragraphs'>
-                <p>Well, there are two options.</p>
-                <p>We can go inside</p>
-                <p>or visit the dogpark.</p>
+                <p>Well, what about going to your place...</p>
+                <p>or visit the dogpark?</p>
             </div>
             <div class='continue'>
                 <a href='?dialog=4'>Continue</a>
@@ -75,17 +74,43 @@ $dialog_4 = "
             <div class='paragraphs'>
                 <p>I'd like to</p>
                 <a class='dialog-option' href='/sign-in.php'>Go inside.</a>
-                <a class='dialog-option' href='/list.php'>Go to the dogpark.</a>
+                <a class='dialog-option' href='?dialog=5'>Go to the dogpark.</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png' alt=''>
     </div>
 ";
 
-$dialog = [$welcomeMessage, $dialog_1, $dialog_2, $dialog_3, $dialog_4];
+$dialog_5 = "
+<div class='speechbubble-home' id='bob'>
+        <img src='/assets/images/speech_top.png' alt=''>
+        <div class='content'>
+            <div class='paragraphs'>
+                <p>Alright, let's go!</p>
+            </div>
+            <div class='continue'>
+                <a href='?dialog=change'>Continue</a>
+            </div>
+        </div>
+        <img src='/assets/images/speech_bottom_left.png' alt=''>
+    </div>
+";
+
+$dialog_6 = function(){
+    if( isset($_GET['dialog']) ){
+        if( $_GET['dialog'] == "change" ){
+        echo " dissapear";
+        }else{
+            echo "";
+        }
+    }
+    header( "refresh:5;url=list.php" );
+};
+
+$dialog = [$welcomeMessage, $dialog_1, $dialog_2, $dialog_3, $dialog_4, $dialog_5, $dialog_6];
 
 ?>
-<section class="<?php setBgImage(); ?>">
+<section class="<?php setBgImage(); $dialog_6(); ?>">
     <?php dialogOptions($dialog); ?>
 </section>
 <?php
