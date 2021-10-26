@@ -29,7 +29,7 @@ function echoBreed(){
 }
 
 $welcomeMessage = "
-<div class='speechbubble-home' id='bob'>
+<div class='bubble speechbubble-home' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -46,7 +46,7 @@ $welcomeMessage = "
 ";
 
 $dialog_1 = "
-<div class='speechbubble-home' id='bob'>
+<div class='bubble speechbubble-home' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -63,7 +63,7 @@ $dialog_1 = "
 ";
 
 $dogOwners = "
-<div class='scroll-table'>
+<div class='scroll scroll-table'>
     <img src='/assets/images/scrolls_top.png' class='tb-img'>
     <div class='content'>
         <h1>Dogs at the dogpark</h1>";
@@ -79,7 +79,7 @@ $dogOwners .=  "
 ";
 
 $dialog_2 = 
-"<div class='speechbubble-home' id='bob'>
+"<div class='bubble speechbubble-home' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -95,7 +95,7 @@ $dialog_2 =
 ";
 
 $dialog_3 = "
-<div class='speechbubble-home' id='user'>
+<div class='bubble speechbubble-home' id='user'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
             <div class='paragraphs'>

@@ -225,7 +225,8 @@ th{
 }
 
 .content .dialog-option:hover::before,
-.content .dialog-option:focus::before {
+.content .dialog-option:focus::before,
+.buttons > a:first-child:hover::before {
 	background-image: url("/assets/images/active_dialog.png");
 	height: 80%;
 	width: 17px;
@@ -240,7 +241,7 @@ th{
 .content .continue a{
     text-decoration: none;
     color: black;
-    margin-right: 30px;
+    margin-right: 60px;
 }
 
 .scroll-home {
@@ -248,6 +249,14 @@ th{
 	width: 600px;
 	top: 20px;
 	left: 150px;
+}
+
+.scroll-home > .content > .paragraphs p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 .scroll-signin{
@@ -313,6 +322,23 @@ textarea{
     width: 350px;
     padding-left: 30px;
     padding-top: 30px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons > a:first-child{
+    color: black;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.buttons > button:last-child{
+    font-size: 1rem;
+    height: 60px;
 }
 
 input:focus,

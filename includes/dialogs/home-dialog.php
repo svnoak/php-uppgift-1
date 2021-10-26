@@ -99,7 +99,11 @@ $dialog_2 = "
             <label for='notes'>Notes</label>
             <textarea type='text' id='notes' required/></textarea>
         </div>
-        <button name='add-dog'>Pick up dog</button>
+        <div class='buttons'>
+            <a href='?dialog=0'>Go back</a>
+            <button name='add-dog'>Pick up dog</button>
+        </div>
+        
     </form>
     <img src='/assets/images/scrolls_bottom.png' class='tb-img'>
 </div>

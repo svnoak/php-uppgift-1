@@ -24,7 +24,7 @@ if( isset($_GET['id']) ){
 }
 
 $dogDetails_1 = "
-<div class='speechbubble-details-park' id='bob'>
+<div class='bubble speechbubble-details-park' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -39,7 +39,7 @@ $dogDetails_1 = "
 ";
 
 $dogDetails_2 = "
-<div class='speechbubble-details-park' id='bob'>
+<div class='bubble speechbubble-details-park' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -54,7 +54,7 @@ $dogDetails_2 = "
 ";
 
 $dogDetails_3 = "
-<div class='speechbubble-details-park' id='bob'>
+<div class='bubble speechbubble-details-park' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
