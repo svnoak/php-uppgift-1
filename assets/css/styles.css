@@ -273,16 +273,44 @@ th{
 .scroll-signin > .content > .input{
     display: flex;
     flex-direction: column;
+    border: none;
+    background-color: transparent;
 }
 
-.scroll-signin > .content > .input input{
-    height: 30px;
-
+.scroll-signin > .content > .input input {
+	height: 30px;
+	background-image: url("/assets/images/bar.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	width: 400px;
+	height: 40px;
+    padding-left: 30px;
 }
 
-.scroll-signin > .content button{
-    width: 60px;
-    margin-bottom: 30px;
+form button {
+	background-image: url("/assets/images/button.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	width: 118px;
+	height: 50px;
+	margin: 10px;
+	font-size: 1.2rem;
+	font-weight: bolder;
+}
+
+form button:hover{
+    background-image: url("/assets/images/button_pressed.png");
+}
+
+.scroll-signin > .content > .input input:focus{
+    outline: none;
 }
 
 .scroll-home > .content,

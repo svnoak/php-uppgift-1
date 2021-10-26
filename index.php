@@ -15,7 +15,7 @@ if( isset($_POST['signin']) ){
                     $_SESSION['username'] = $user['username'];
                     $_SESSION['userID'] = $user['id'];
                     $_SESSION['email'] = $user['email'];
-                    header("location: /list.php");
+                    header("location: /home.php");
                     exit();
                 }else{
                     setSessionStatus("Wrong email or password");

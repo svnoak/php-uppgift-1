@@ -16,6 +16,10 @@ function isActive($page){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/assets/css/styles.css">
     <title>IDDb</title>
+    <script>
+    /*to prevent Firefox FOUC, this must be here*/
+    let FF_FOUC_FIX;
+  </script>
 </head>
 <body>
 <!--     <nav>

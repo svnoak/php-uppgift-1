@@ -40,7 +40,7 @@ if( isset($_SESSION['dialogStarted']) ){
         <div class='content'>
             <div class='paragraphs'>
                 <p>Oh, I'm on my way to</p>
-                <a class='dialog-option' href='/sign-in.php'>Go to my place.</a>
+                <a class='dialog-option' href='?dialog=7>Go to my place.</a>
                 <a class='dialog-option' href='?dialog=5'>Visit the dogpark.</a>
             </div>
         </div>
@@ -54,7 +54,7 @@ $dialog_4 = "<div class='speechbubble-home' id='user'>
 <div class='content'>
     <div class='paragraphs'>
         <p>Sure, let's</p>
-        <a class='dialog-option' href='/sign-in.php?&started=true'>Go to my place.</a>
+        <a class='dialog-option' href='?dialog=7&started=true'>Go to my place.</a>
         <a class='dialog-option' href='?dialog=5&started=true'>Visit the dogpark.</a>
     </div>
 </div>
@@ -117,7 +117,7 @@ $dialog_4 = "
         <div class='content'>
             <div class='paragraphs'>
                 <p>Sure, let's</p>
-                <a class='dialog-option' href='/sign-in.php?&started=true'>Go to my place.</a>
+                <a class='dialog-option' href='?dialog=7&started=true'>Go to my place.</a>
                 <a class='dialog-option' href='?dialog=5&started=true'>Visit the dogpark.</a>
             </div>
         </div>
@@ -152,7 +152,7 @@ $signin_1 = "
                 <p class='dialog'>There they are!</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=1'>Continue</a>
+                <a href='?dialog=8'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png'>
