@@ -1,5 +1,6 @@
 <?php
 require_once "authentication.php";
+require_once "dialogs/dialogs.php";
 require_once "functions.php";
 
 function isActive($page){

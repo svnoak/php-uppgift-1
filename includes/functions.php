@@ -51,7 +51,7 @@ $action == om tabellen ska ha en delete action eller inte.
 */
 function createTable($array, $headers, $links, $action){
     if( count($array) > 0 ){
-        $htmlTable = "<table class='styled-table'>";
+        $htmlTable = "<table>";
         $htmlTable .= createTableHead($headers, $action);
         $htmlTable .= createTableRows($array, $links, $headers, $action);
         $htmlTable .= "</table>";
@@ -84,10 +84,10 @@ function createTableRows($array, $links, $headers, $action){
             if( in_array( $key, $headers ) ){
                 if( array_key_exists( $key, $links ) ){
                     $i = $links[$key];
-                    $page = $i['page'];
+                    $dialog = $i['dialog'];
                     $param = $i['param'];
                     $itemsParam = paramToURL($items[$param]);
-                    $row .= "<td><a href=$page.php?$param=$itemsParam>$item</a></td>";
+                    $row .= "<td><a href=?dialog=$dialog&$param=$itemsParam>$item</a></td>";
                 }elseif( $key == "owner") {
                     $row .= "<td>" . findInDB($item, "users", "id", "username") . "</td>";
                     }else{
@@ -218,35 +218,39 @@ function cleanPageName($page){
     echo $name[1];
 }
 
-function setBgImage(){
-    $page = $_SERVER['PHP_SELF'];
-    if( $page == "/" || $page == "/index.php" ){
-        if( isLoggedIn() ){
-            echo "house-bg";
-        }
-        echo "home-bg";
+function setBgImage($change, $scene){
+    if( !$change ){
+        echo "bg $scene-bg";
     }else{
-       echo cleanPageName($page)."-bg";
+    if( $scene == "index" ){
+        echo "bg index";
+    }else{
+        echo "bg $change";
     }
+}
 };
 
-function dialogOptions($dialog){
+/* 
+THIS ONE RIGHT HERE OFFICER!
+*/
+
+function dialogOptions($scene, $dialogs){
     if(isset($_GET['dialog'])){
         if( isset($_GET['started']) ) $_SESSION['dialogStarted'] = true;
-        if( (int)$_GET['dialog'] ){
+        if( is_int((int)$_GET['dialog']) ){
             $level = $_GET['dialog'];
-            echo $dialog[$level];
+            echo $dialogs[$scene][$level];
         }else{
             return null;
         }
         }else{
-            echo $dialog[0];
+            echo $dialogs[$scene][0];
     }
 }
 
 function chooseNeighbour(){
     if( !isset($_SESSION['neighbour'])) {
-    $names = ["Jörgen", "Lennart", "Bob"];
+    $names = ["Jörgen", "Lennart", "Bob", "Gertrud"];
     $index = array_rand($names);
     $neighbour = $names[$index];
     $_SESSION['neighbour'] = $neighbour;

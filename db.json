@@ -35,6 +35,54 @@
             "notes": "No notes",
             "owner": 1,
             "id": 2
+        },
+        {
+            "name": "Arya",
+            "breed": "Husky",
+            "age": "1",
+            "notes": "En Stark och stark",
+            "owner": 1,
+            "id": 1
+        },
+        {
+            "name": "Billie",
+            "breed": "French Bulldog",
+            "age": "7",
+            "notes": "Clumsy and FURious",
+            "owner": 1,
+            "id": 2
+        },
+        {
+            "name": "Arya",
+            "breed": "Husky",
+            "age": "1",
+            "notes": "En Stark och stark",
+            "owner": 1,
+            "id": 1
+        },
+        {
+            "name": "Billie",
+            "breed": "French Bulldog",
+            "age": "7",
+            "notes": "Clumsy and FURious",
+            "owner": 1,
+            "id": 2
+        },
+        {
+            "name": "Arya",
+            "breed": "Husky",
+            "age": "1",
+            "notes": "En Stark och stark",
+            "owner": 1,
+            "id": 1
+        },
+        {
+            "name": "Billie",
+            "breed": "French Bulldog",
+            "age": "7",
+            "notes": "Clumsy and FURious",
+            "owner": 1,
+            "id": 2
         }
     ]
 }
