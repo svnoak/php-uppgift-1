@@ -83,6 +83,102 @@
             "notes": "Clumsy and FURious",
             "owner": 1,
             "id": 2
+        },
+        {
+            "name": "Olivia",
+            "breed": "Pug",
+            "age": "2",
+            "notes": null,
+            "owner": 1,
+            "id": 3
+        },
+        {
+            "name": "Jonna",
+            "breed": "Irish settler",
+            "age": "15",
+            "notes": null,
+            "owner": 1,
+            "id": 4
+        },
+        {
+            "name": "Kim",
+            "breed": "Kleiner Muensterl\u00e4nder",
+            "age": "4",
+            "notes": null,
+            "owner": 1,
+            "id": 5
+        },
+        {
+            "name": "Erik",
+            "breed": "Poodle",
+            "age": "16",
+            "notes": null,
+            "owner": 1,
+            "id": 6
+        },
+        {
+            "name": "Sebbe",
+            "breed": "Husky",
+            "age": "4",
+            "notes": null,
+            "owner": 1,
+            "id": 7
+        },
+        {
+            "name": "Sebastion",
+            "breed": "Husky",
+            "age": "16",
+            "notes": null,
+            "owner": 1,
+            "id": 8
+        },
+        {
+            "name": "Kim",
+            "breed": "French Bulldog",
+            "age": "14",
+            "notes": null,
+            "owner": 1,
+            "id": 9
+        },
+        {
+            "name": "as",
+            "breed": "asda",
+            "age": "12",
+            "notes": null,
+            "owner": 1,
+            "id": 10
+        },
+        {
+            "name": "Pelle",
+            "breed": "Husky",
+            "age": "4",
+            "notes": null,
+            "owner": 1,
+            "id": 11
+        },
+        {
+            "name": "asda",
+            "breed": "asda",
+            "age": "22",
+            "notes": null,
+            "owner": 1,
+            "id": 12
+        },
+        {
+            "name": "Kim",
+            "breed": "Muensterl\u00e4nder",
+            "age": "2",
+            "notes": null,
+            "owner": 1,
+            "id": 13
+        },
+        {
+            "name": "Kim",
+            "breed": "Another one",
+            "age": "4",
+            "notes": null,
+            "owner": 1,
+            "id": 14
         }
     ]
 }

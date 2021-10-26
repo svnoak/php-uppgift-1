@@ -52,6 +52,17 @@ footer{
     background-image: url("/assets/images/dogpark.png");
 }
 
+.backyard-bg{
+    background-image: url("/assets/images/backyard.png");
+}
+
+.houseToBackyard{
+    background-image: url("/assets/images/house.png");
+    animation: houseToBackyard;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 .indexToDogpark{
     background-image: url("/assets/images/index_default.png");
     animation: indexToDogpark;
@@ -383,7 +394,7 @@ form button:hover{
 .scroll-add{
     width: 450px;
     position: absolute;
-    top: 150px;
+    top: 45px;
     left: 500px;
 }
 
@@ -440,6 +451,13 @@ form button:hover{
     100% { opacity: 1; background-image: url("/assets/images/index_default.png"); }
 }
 
+@keyframes houseToBackyard{
+    0% { opacity: 1; background-image: url("/assets/images/house.png"); }
+    40% { opacity: 0; }
+    60% { opacity: 0; }
+    100% { opacity: 1; background-image: url("/assets/images/backyard.png"); }
+}
+
 @keyframes dogparkToDogparkdetails{
     0% { 
         transform: scale(1); 
@@ -460,3 +478,4 @@ form button:hover{
         left: 0px;
     }
 }
+
