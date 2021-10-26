@@ -30,7 +30,7 @@ function echoBreed(){
 
 $welcomeMessage = "
 <div class='speechbubble-home' id='bob'>
-    <img src='/assets/images/speech_top.png' alt=''>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
             <p class='dialog'>Wow!</p>
@@ -41,13 +41,13 @@ $welcomeMessage = "
             <a href='?dialog=1&scene=dogpark'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_left.png' alt=''>
+    <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
 </div>
 ";
 
 $dialog_1 = "
 <div class='speechbubble-home' id='bob'>
-    <img src='/assets/images/speech_top.png' alt=''>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
             <p class='dialog'>Let's talk to the owners.</p>
@@ -58,13 +58,13 @@ $dialog_1 = "
             <a href='?dialog=2&scene=dogpark'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_left.png' alt=''>
+    <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
 </div>
 ";
 
 $dogOwners = "
 <div class='scroll-table'>
-    <img src='/assets/images/scrolls_top.png' alt=''>
+    <img src='/assets/images/scrolls_top.png' class='tb-img'>
     <div class='content'>
         <h1>Dogs at the dogpark</h1>";
 $dogOwners .= echoBreed();
@@ -74,13 +74,13 @@ $dogOwners .=  "
             <a href='?dialog=3&scene=dogpark'>Back</a>
         </div>
     </div>
-    <img src='/assets/images/scrolls_bottom.png' alt=''>
+    <img src='/assets/images/scrolls_bottom.png' class='tb-img'>
 </div>
 ";
 
 $dialog_2 = 
 "<div class='speechbubble-home' id='bob'>
-    <img src='/assets/images/speech_top.png' alt=''>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
             <p class='dialog'>So?.</p>
@@ -90,13 +90,13 @@ $dialog_2 =
             <a href='?dialog=4&scene=dogpark'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_left.png' alt=''>
+    <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
 </div>
 ";
 
 $dialog_3 = "
 <div class='speechbubble-home' id='user'>
-    <img src='/assets/images/speech_top.png' alt=''>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
             <div class='paragraphs'>
                 <p>I'm gonna</p>
@@ -104,7 +104,7 @@ $dialog_3 = "
                 <a class='dialog-option' href='?change=dogparkToIndex&scene=index&dialog=6'>Head back to town.</a>
             </div>
         </div>
-    <img src='/assets/images/speech_bottom.png' alt=''>
+    <img src='/assets/images/speech_bottom.png' class='tb-img'>
 </div>
 ";
 

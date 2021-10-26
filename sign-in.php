@@ -1,7 +1,7 @@
 <?php
 include_once "includes/header.php";
 
-if( isLoggedIn() ) header('Location: /list.php');
+if( isLoggedIn() ) header('Location: /home.php');
 
 if( isset($_POST['signin']) ){
     if( strlen($_POST['email']) && strlen($_POST['password']) ){
@@ -15,7 +15,7 @@ if( isset($_POST['signin']) ){
                     $_SESSION['username'] = $user['username'];
                     $_SESSION['userID'] = $user['id'];
                     $_SESSION['email'] = $user['email'];
-                    header("location: /list.php");
+                    header("location: /home.php");
                     exit();
                 }else{
                     setSessionStatus("Wrong email or password");
@@ -26,16 +26,4 @@ if( isset($_POST['signin']) ){
         setSessionStatus("You need to enter both email and password");
     }
 }
-
-
-
-$dialog = [$dialog_0, $dialog_1];
-
-
-?>
-<section class="<?php setBgImage(); ?>">
-<?php dialogOptions($dialog); ?>    
-</section>
-<?php
-include_once "includes/footer.php";
 ?>

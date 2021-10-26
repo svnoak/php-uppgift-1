@@ -44,6 +44,10 @@ footer{
     animation-fill-mode: forwards;
 }
 
+.home-bg{
+    background-image: url("/assets/images/house.png");
+}
+
 .dogpark-bg{
     background-image: url("/assets/images/dogpark.png");
 }
@@ -100,6 +104,13 @@ section {
 	left: 100px;
 }
 
+.speechbubble-house{
+    width: 700px;
+    position: absolute;
+    top: 224px;
+    left: 580px;
+}
+
 .speechbubble-details-park{
     width: 300px;
     position: absolute;
@@ -107,17 +118,12 @@ section {
     left: 200px;
 }
 
-.speechbubble-home img,
-.scroll-home img,
-.scroll-signin img,
-.scroll-table img,
-.speechbubble-details-park img{
+.tb-img{
     width: 100%;
     margin: -5px 0;
 }
 
-.speechbubble-home > .content,
-.speechbubble-details-park > .content{
+.bubble > .content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -215,7 +221,7 @@ th{
 }
 
 .content .dialog-option:first-child{
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .content .dialog-option:hover::before,
@@ -270,14 +276,15 @@ th{
     height: 300px;
 }
 
-.scroll-signin > .content > .input{
+.scroll > .content > .input{
     display: flex;
     flex-direction: column;
     border: none;
     background-color: transparent;
+    padding-left: 30px;
 }
 
-.scroll-signin > .content > .input input {
+.scroll > .content > .input input {
 	height: 30px;
 	background-image: url("/assets/images/bar.png");
 	background-position: center;
@@ -288,6 +295,29 @@ th{
 	width: 400px;
 	height: 40px;
     padding-left: 30px;
+}
+
+.scroll-add > .content > .input input,
+textarea{
+    width: 350px;
+}
+
+textarea{
+    background-image: url("/assets/images/bar.png");
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+    border:none;
+    height: 100px;
+    width: 350px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
 }
 
 form button {
@@ -309,13 +339,7 @@ form button:hover{
     background-image: url("/assets/images/button_pressed.png");
 }
 
-.scroll-signin > .content > .input input:focus{
-    outline: none;
-}
-
-.scroll-home > .content,
-.scroll-signin > .content,
-.scroll-table > .content{
+.scroll > .content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -328,6 +352,13 @@ form button:hover{
     margin: -3px 0;
     min-height: 150px;
     font-size: 2rem;
+}
+
+.scroll-add{
+    width: 450px;
+    position: absolute;
+    top: 150px;
+    left: 500px;
 }
 
 .scroll-table > .content > table {

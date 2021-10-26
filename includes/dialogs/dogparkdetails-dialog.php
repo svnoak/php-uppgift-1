@@ -25,7 +25,7 @@ if( isset($_GET['id']) ){
 
 $dogDetails_1 = "
 <div class='speechbubble-details-park' id='bob'>
-    <img src='/assets/images/speech_top.png' alt=''>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
         $dogInfo_1
@@ -34,13 +34,13 @@ $dogDetails_1 = "
             <a href='?dialog=1&scene=dogparkdetails&id=$id'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_right.png' alt=''>
+    <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
 </div>
 ";
 
 $dogDetails_2 = "
 <div class='speechbubble-details-park' id='bob'>
-    <img src='/assets/images/speech_top.png' alt=''>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
         $dogInfo_2
@@ -49,13 +49,13 @@ $dogDetails_2 = "
             <a href='?dialog=2&scene=dogparkdetails&id=$id'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_right.png' alt=''>
+    <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
 </div>
 ";
 
 $dogDetails_3 = "
 <div class='speechbubble-details-park' id='bob'>
-    <img src='/assets/images/speech_top.png' alt=''>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
         $dogInfo_3
@@ -64,7 +64,7 @@ $dogDetails_3 = "
             <a href='?dialog=2&change=dogparkdetailsToDogpark&scene=dogpark&id=$id'>Sure</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_right.png' alt=''>
+    <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
 </div>
 ";
 
