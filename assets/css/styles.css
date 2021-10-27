@@ -129,6 +129,13 @@ section {
     left: 580px;
 }
 
+.speechbubble-backyard{
+    width: 700px;
+    position: absolute;
+    top: 164px;
+    left: 720px;
+}
+
 .speechbubble-details-park{
     width: 300px;
     position: absolute;

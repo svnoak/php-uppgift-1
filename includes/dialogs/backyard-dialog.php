@@ -38,13 +38,13 @@ if( isset($_GET['breed']) ){
 
 if( $userDogs > 0 ){
 $welcomeMessage = "
-    <div class='bubble speechbubble-home' id='bob'>
+    <div class='bubble speechbubble-backyard' id='bob'>
         <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
             <div class='paragraphs'>
                 <p class='dialog'>I dig it.</p>
                 <p class='dialog'>A lot of space for your dogs!</p>
-                <p class='dialog'>Why don't you tell me more about them?</p>
+                <p class='dialog'>Tell me more about them!</p>
             </div>
             <div class='continue'>
                 <a href='?dialog=1&scene=backyard'>Continue</a>
@@ -55,7 +55,7 @@ $welcomeMessage = "
 ";
 }else{
 $welcomeMessage = "
-    <div class='bubble speechbubble-home' id='bob'>
+    <div class='bubble speechbubble-backyard' id='bob'>
         <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
             <div class='paragraphs'>
@@ -90,7 +90,7 @@ $ownedDogs .=  "
 ";
 
 $success_added = "
-<div class='bubble speechbubble-house' id='bob'>
+<div class='bubble speechbubble-backyard' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
             <div class='paragraphs'>
@@ -139,7 +139,7 @@ $addDog = "
 ";
 
 $dialog_4 =
-"<div class='bubble speechbubble-home' id='bob'>
+"<div class='bubble speechbubble-backyard' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -155,7 +155,7 @@ $dialog_4 =
 ";
 
 $dialog_5 = "
-<div class='bubble speechbubble-home' id='user'>
+<div class='bubble speechbubble-backyard' id='user'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
             <div class='paragraphs'>
