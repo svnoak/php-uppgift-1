@@ -22,29 +22,10 @@ function isActive($page){
   </script>
 </head>
 <body>
-<!--     <nav>
-        <ul>
-            <li id="nav-home" class="nav-item <?php isActive("index") ?>">
-                <a href="/index.php">Home</a>
-            </li>
-            <li id="nav-list" class="nav-item <?php isActive("list") ?>">
-                <a href="/list.php">Doggos</a>
-            </li>
-            <?php  if( isLoggedIn() ){ ?>
-                <li id="nav-add" class="nav-item <?php isActive("add") ?>">
-                <a href="/add.php">Add</a>
-            </li>
-            <li id="nav-profile" class="nav-item <?php isActive("profile") ?>">
-                <a href="/profile.php">Backyard</a>
-            </li>
-            <li id="nav-signout" class="nav-item <?php isActive("sign-out") ?>">
-                <a href="/sign-out.php">Sign out</a>
-            </li>
-            <?php }else{ ?>
-            <li id="nav-signin" class="nav-item <?php isActive("sign-in") ?>">
-                <a href="/sign-in.php">Sign in</a>
-            </li>
-            <?php } ?>
-            <div id="selector"></div>
-        </ul>
-    </nav> -->
+<!--
+PLEASE PLAY WITH THE CONSOLE CLOSED!
+Some elements might fall outside of you viewwindow otherwise.
+
+If you want, you can always play with the Responsive Design Mode in action.
+CTRL + Shift + M on windows (everyone else got to figure it out themselves.)
+-->

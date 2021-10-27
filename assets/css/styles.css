@@ -82,6 +82,18 @@ footer{
     left: 0;
 }
 
+.dogparkdetailsToDogpark{
+    background-image: url("/assets/images/dogpark.png");
+    animation: dogparkdetailsToDogpark;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    background-position: left;
+    transform: scale(1);
+    position: relative;
+    left: 0;
+}
+
 .dogparkdetails-bg{
     background-image: url("/assets/images/dogpark.png");
     background-size: cover;
