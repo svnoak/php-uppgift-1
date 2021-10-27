@@ -43,6 +43,14 @@
             "notes": "A noodle poodle",
             "owner": 1,
             "id": 3
+        },
+        {
+            "name": "Niklas",
+            "breed": "Husky",
+            "age": "3",
+            "notes": null,
+            "owner": 1,
+            "id": 4
         }
     ]
 }

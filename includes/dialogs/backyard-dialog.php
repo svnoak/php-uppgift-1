@@ -19,6 +19,14 @@ if( isset($_SESSION['userID']) ){
 $headers = ['name', 'breed', 'age', 'notes'];
 $userDogs = filterData($dogs, "owner", $userID);
 
+if( isset($_SESSION['dogPickedUp'], $_SESSION['lastDog']) ){
+    $pickedUpDog = $_SESSION['dogPickedUp'];
+    $lastDog = $_SESSION['lastDog'];
+}else{
+    $lastDog = "";
+    $pickedUpDog = "";
+}
+
 // Kollar om det finns en breed eller inte.
 if( isset($_GET['breed']) ){
     if($_GET['breed']){
