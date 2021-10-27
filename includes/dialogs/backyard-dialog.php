@@ -127,7 +127,7 @@ $addDog = "
         </div>
         <div class='input'>
             <label for='notes'>Notes</label>
-            <textarea type='text' id='notes' required/></textarea>
+            <textarea type='text' name='notes' id='notes' required/></textarea>
         </div>
         <div class='buttons'>
             <a href='?dialog=0&scene=backyard'>Go back</a>
