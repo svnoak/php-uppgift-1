@@ -115,7 +115,7 @@ $dialog_2 = "
         </div>
         <div class='input'>
             <label for='notes'>Notes</label>
-            <textarea type='text' name='notes id='notes' required/></textarea>
+            <textarea type='text' name='notes' id='notes' required/></textarea>
         </div>
         <div class='buttons'>
             <a href='?dialog=0'>Go back</a>

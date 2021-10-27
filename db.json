@@ -27,6 +27,22 @@
             "notes": null,
             "owner": 1,
             "id": 1
+        },
+        {
+            "name": "Pelle",
+            "breed": "Husky",
+            "age": "3",
+            "notes": null,
+            "owner": 1,
+            "id": 2
+        },
+        {
+            "name": "Erik",
+            "breed": "Poodle",
+            "age": "5",
+            "notes": "A noodle poodle",
+            "owner": 1,
+            "id": 3
         }
     ]
 }
