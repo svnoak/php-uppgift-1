@@ -115,6 +115,13 @@ section {
 	left: 100px;
 }
 
+.speechbubble-park{
+    width: 700px;
+	position: absolute;
+	top: 150px;
+	left: 180px;
+}
+
 .speechbubble-house{
     width: 700px;
     position: absolute;
@@ -125,9 +132,24 @@ section {
 .speechbubble-details-park{
     width: 300px;
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 200px;
 }
+
+.speechbubble-details-park .content .continue{
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.speechbubble-details-park .content .continue a{
+    margin-right: 20px;
+}
+
+.speechbubble-details-park .tb-img{
+    margin: 0;
+}
+
+
 
 .tb-img{
     width: 100%;
@@ -280,7 +302,7 @@ th{
 .scroll-table{
     position: absolute;
     width: 1000px;
-	top: -100px;
+	top: 0px;
 	left: 200px;
 }
 

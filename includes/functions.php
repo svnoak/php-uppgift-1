@@ -57,7 +57,7 @@ function createTable($array, $headers, $links, $action){
         $htmlTable .= "</table>";
         return $htmlTable;
     }else{
-        echo "<p>There are no dogs. Do you want to <a href='add.php'>add a dog</a>?</p>";
+        /* echo "<p>There are no dogs. Do you want to <a href='add.php'>add a dog</a>?</p>"; */
     }
 }
 
@@ -174,7 +174,7 @@ function deleteInDB( $searchArg, $dbarg, $searchKey, $returnValue ){
     $file = getFile("db.json");
     $db = $file[$dbarg];
     $index = columnSearch($searchArg, $db, $searchKey, $dbarg);
-    unset($file[$dbarg][$index]);
+    array_splice($file[$dbarg], $index, 1);
     file_put_contents( "db.json", json_encode($file) );
 }
 
@@ -187,7 +187,11 @@ function columnSearch($searchArg, $db, $searchKey, $dbarg,){
 
 // Hittar den största valuen av en specifika keyn
 function getMax($db,$key){
-    return max(array_column($db, $key));
+    if( count($db) > 0 ){
+        return max(array_column($db, $key));
+    }else{
+        return 0;
+    }
 }
 
 // Lägger till en grej i databasen.

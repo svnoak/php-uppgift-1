@@ -23,13 +23,19 @@ if( isset($_GET['breed']) ){
     }
 }
 
+if( isLoggedIn()){
+    $myPlace = "?change=dogparkToHouse&scene=house";
+}else{
+    $myPlace = "?change=dogparkToIndex&scene=index&dialog=7";
+}
+
 function echoBreed(){
     global $info;
     if(isset($info)) return $info;
 }
 
 $welcomeMessage = "
-<div class='bubble speechbubble-home' id='bob'>
+<div class='bubble speechbubble-park' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -41,12 +47,12 @@ $welcomeMessage = "
             <a href='?dialog=1&scene=dogpark'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+    <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
 </div>
 ";
 
 $dialog_1 = "
-<div class='bubble speechbubble-home' id='bob'>
+<div class='bubble speechbubble-park' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -58,7 +64,7 @@ $dialog_1 = "
             <a href='?dialog=2&scene=dogpark'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+    <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
 </div>
 ";
 
@@ -79,7 +85,7 @@ $dogOwners .=  "
 ";
 
 $dialog_2 = 
-"<div class='bubble speechbubble-home' id='bob'>
+"<div class='bubble speechbubble-park' id='bob'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -90,17 +96,17 @@ $dialog_2 =
             <a href='?dialog=4&scene=dogpark'>Continue</a>
         </div>
     </div>
-    <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+    <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
 </div>
 ";
 
 $dialog_3 = "
-<div class='bubble speechbubble-home' id='user'>
+<div class='bubble speechbubble-park' id='user'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
             <div class='paragraphs'>
                 <p>I'm gonna</p>
-                <a class='dialog-option' href='?change=dogparkToHouse&scene=house&dialog=7'>Go to my place.</a>
+                <a class='dialog-option' href='$myPlace'>Go to my place.</a>
                 <a class='dialog-option' href='?change=dogparkToIndex&scene=index&dialog=6'>Head back to town.</a>
             </div>
         </div>

@@ -21,164 +21,20 @@
     ],
     "dogs": [
         {
-            "name": "Arya",
-            "breed": "Husky",
-            "age": "1",
-            "notes": "En Stark och stark",
-            "owner": 1,
-            "id": 1
-        },
-        {
-            "name": "Niklas",
-            "breed": "Poodle",
-            "age": "4",
-            "notes": "No notes",
-            "owner": 1,
-            "id": 2
-        },
-        {
-            "name": "Arya",
-            "breed": "Husky",
-            "age": "1",
-            "notes": "En Stark och stark",
-            "owner": 1,
-            "id": 1
-        },
-        {
-            "name": "Billie",
-            "breed": "French Bulldog",
-            "age": "7",
-            "notes": "Clumsy and FURious",
-            "owner": 1,
-            "id": 2
-        },
-        {
-            "name": "Arya",
-            "breed": "Husky",
-            "age": "1",
-            "notes": "En Stark och stark",
-            "owner": 1,
-            "id": 1
-        },
-        {
-            "name": "Billie",
-            "breed": "French Bulldog",
-            "age": "7",
-            "notes": "Clumsy and FURious",
-            "owner": 1,
-            "id": 2
-        },
-        {
-            "name": "Arya",
-            "breed": "Husky",
-            "age": "1",
-            "notes": "En Stark och stark",
-            "owner": 1,
-            "id": 1
-        },
-        {
-            "name": "Billie",
-            "breed": "French Bulldog",
-            "age": "7",
-            "notes": "Clumsy and FURious",
-            "owner": 1,
-            "id": 2
-        },
-        {
-            "name": "Olivia",
-            "breed": "Pug",
-            "age": "2",
-            "notes": null,
-            "owner": 1,
-            "id": 3
-        },
-        {
-            "name": "Jonna",
-            "breed": "Irish settler",
-            "age": "15",
-            "notes": null,
-            "owner": 1,
-            "id": 4
-        },
-        {
-            "name": "Kim",
-            "breed": "Kleiner Muensterl\u00e4nder",
-            "age": "4",
-            "notes": null,
-            "owner": 1,
-            "id": 5
-        },
-        {
-            "name": "Erik",
-            "breed": "Poodle",
-            "age": "16",
-            "notes": null,
-            "owner": 1,
-            "id": 6
-        },
-        {
-            "name": "Sebbe",
-            "breed": "Husky",
-            "age": "4",
-            "notes": null,
-            "owner": 1,
-            "id": 7
-        },
-        {
-            "name": "Sebastion",
-            "breed": "Husky",
-            "age": "16",
-            "notes": null,
-            "owner": 1,
-            "id": 8
-        },
-        {
-            "name": "Kim",
-            "breed": "French Bulldog",
-            "age": "14",
-            "notes": null,
-            "owner": 1,
-            "id": 9
-        },
-        {
-            "name": "as",
-            "breed": "asda",
-            "age": "12",
-            "notes": null,
-            "owner": 1,
-            "id": 10
-        },
-        {
             "name": "Pelle",
-            "breed": "Husky",
-            "age": "4",
-            "notes": null,
-            "owner": 1,
-            "id": 11
-        },
-        {
-            "name": "asda",
-            "breed": "asda",
-            "age": "22",
-            "notes": null,
-            "owner": 1,
-            "id": 12
-        },
-        {
-            "name": "Kim",
-            "breed": "Muensterl\u00e4nder",
+            "breed": "Collie",
             "age": "2",
             "notes": null,
             "owner": 1,
-            "id": 13
+            "id": 1
         },
         {
             "name": "Kim",
-            "breed": "Another one",
+            "breed": "Corgi",
             "age": "4",
             "notes": null,
             "owner": 1,
-            "id": 14
+            "id": 2
         }
     ]
 }
