@@ -14,8 +14,10 @@ $dialogs = [
 if( isLoggedIn() ){  
     include "backyard-dialog.php";
     include "home-dialog.php";
+    include "backyarddetails-dialog.php";
     $dialogs["backyard"] = $backyard;
     $dialogs["home"] = $home;
+    $dialogs["backyarddetails"] = $backyarddetails;
 }
 
 ?>

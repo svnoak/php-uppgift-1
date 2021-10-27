@@ -90,9 +90,9 @@ footer{
     left: 1200px;
 }
 
-.dogparkdetailsToDogpark{
-    background-image: url("/assets/images/dogpark.png");
-    animation: dogparkdetailsToDogpark;
+.backyardTodogdetails{
+    background-image: url("/assets/images/backyard-dog.png");
+    animation: backyardToBackyarddetails;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     background-size: contain;
@@ -100,6 +100,72 @@ footer{
     transform: scale(1);
     position: relative;
     left: 0;
+}
+
+.backyarddetailsToBackyard{
+    background-image: url("/assets/images/backyard.png");
+    animation: backyarddetailsToBackyard;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background-size: contain;
+    background-position: left;
+    transform: scale(1);
+    position: relative;
+    left: 0;
+}
+
+.backyarddetails-bg{
+    background-image: url("/assets/images/backyard-dog.png");
+    background-size: cover;
+    background-position: left;
+    transform: scale(3);
+    left: 1000px;
+}
+
+.speechbubble-details-yard#user{
+    width: 200px;
+    position: relative;
+    top: 200px;
+    left: 300px;
+}
+
+.speechbubble-details-yard#bob{
+    width: 200px;
+    position: relative;
+    top: 250px;
+    left: 200px;
+}
+
+.speechbubble-details-yard#bob .content{
+    min-height: 0px !important;
+    margin: -4px 0 !important;
+}
+
+.speechbubble-details-yard .content{
+    min-height: 0px !important;
+    margin: -6px 0 !important;
+}
+
+.speechbubble-details-yard#bob .content .continue {
+	margin: 10px 0 5px 0px;
+	font-size: 0.5rem;
+}
+
+.speechbubble-details-yard .content .paragraphs{
+    font-size: 0.8rem;
+}
+
+.speechbubble-details-yard .content .continue {
+	margin-top: 20px;
+	font-size: 0.5rem;
+}
+
+.speechbubble-details-yard .content .continue a{
+	margin-right: 20px;
+}
+
+.speechbubble-details-yard .tb-img {
+	margin: 0;
 }
 
 section {
@@ -508,3 +574,23 @@ form button:hover{
     }
 }
 
+@keyframes backyardToBackyarddetails{
+    0% { 
+        transform: scale(1); 
+    }
+    100% { 
+        transform: scale(3);
+        left: 1000px;
+    }
+}
+
+@keyframes backyarddetailsToBackyard{
+    0% { 
+        transform: scale(3);
+        left: 1000px;
+    }
+    100% {
+        transform: scale(1);
+        left: 0px;
+    }
+}
