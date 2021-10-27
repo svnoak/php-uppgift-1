@@ -21,20 +21,12 @@
     ],
     "dogs": [
         {
-            "name": "Pelle",
-            "breed": "Collie",
+            "name": "Olivia",
+            "breed": "Pug",
             "age": "2",
             "notes": null,
             "owner": 1,
             "id": 1
-        },
-        {
-            "name": "Kim",
-            "breed": "Corgi",
-            "age": "4",
-            "notes": null,
-            "owner": 1,
-            "id": 2
         }
     ]
 }
