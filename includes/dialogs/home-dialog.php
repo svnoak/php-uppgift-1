@@ -10,6 +10,8 @@ if( isset($_SESSION['userID']) ){
     $userID = $_SESSION['userID'];
     $username = $_SESSION['username'];
     $userDogs = filterData($dogs, "owner", $userID);
+}else{
+    $userDogs = [];
 }
 
 if( isset($_SESSION['dogPickedUp'], $_SESSION['lastDog']) ){
@@ -164,5 +166,4 @@ $success_added = "
 ";
 
 $home = [$welcomeMessage, $dialog_1, $dialog_2, $dialog_3, $success_added];
-
 ?>

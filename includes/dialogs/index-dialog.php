@@ -61,7 +61,22 @@ if( isset($_SESSION['dialogStarted']) ){
     </div>
 ";
 
-$dialog_3 = "";
+$dialog_3 = "
+<div class='bubble speechbubble-home' id='bob'>
+        <img src='/assets/images/speech_top.png' class='tb-img'>
+        <div class='content'>
+            <div class='paragraphs'>
+                <p class='dialog'>Mmhhh...</p>
+                <p class='dialog'>What about we go to your place...</p>
+                <p class='dialog'>or visit the dogpark maybe?</p>
+            </div>
+            <div class='continue'>
+                <a href='?dialog=4&scene=index'>Continue</a>
+            </div>
+        </div>
+        <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+    </div>
+";
 $dialog_4 = "<div class='bubble speechbubble-home' id='user'>
 <img src='/assets/images/speech_top.png' class='tb-img'>
 <div class='content'>
@@ -211,6 +226,23 @@ $dialog_6 = "
             </div>
             <div class='continue'>
                 <a href='?dialog=4&scene=index'>Continue</a>
+            </div>
+        </div>
+        <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+    </div>
+";
+
+$dialog_6 = "
+    <div class='bubble speechbubble-home' id='bob'>
+        <img src='/assets/images/speech_top.png' class='tb-img'>
+        <div class='content'>
+            <div class='paragraphs'>
+                <p class='dialog'>Are you nuts!?</p>
+                <p class='dialog'>You can't just try breaking</p>
+                <p class='dialog'>into people's homes like that!</p>
+            </div>
+            <div class='continue'>
+                <a href='?dialog=3&scene=index'>You got me...</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom_left.png' class='tb-img'>

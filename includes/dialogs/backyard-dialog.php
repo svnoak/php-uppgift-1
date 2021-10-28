@@ -1,5 +1,4 @@
 <?php
-
 // Alla delar som skall in i Table.
 $allDogs = getFile($_SERVER["DOCUMENT_ROOT"]."/db.json")["dogs"];
 $links = [
@@ -14,10 +13,12 @@ if( isset($_SESSION['userID']) ){
     $userID = $_SESSION['userID'];
     $username = $_SESSION['username'];
     $userDogs = filterData($dogs, "owner", $userID);
+}else{
+    $dogs = "";
+    $userDogs = [];
 }
 
 $headers = ['name', 'breed', 'age', 'notes'];
-$userDogs = filterData($dogs, "owner", $userID);
 
 if( isset($_SESSION['dogPickedUp'], $_SESSION['lastDog']) ){
     $pickedUpDog = $_SESSION['dogPickedUp'];

@@ -131,6 +131,18 @@ function isPage($page){
     }
 }
 
+function isFrobiddenScene($scene){
+    if( isset($_GET['scene']) ){
+        if( $scene == "home" || $scene == "backyard" || $scene == "backyarddetails" ){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
 
 /* 
 
