@@ -25,6 +25,14 @@ footer{
     color: white;
 }
 
+section {
+	position: absolute;
+	height: 700px;
+	width: 1400px;
+}
+
+/* BACKGROUNDS */
+
 .index-bg,
 .sign-in-bg,
 .index{
@@ -52,9 +60,29 @@ footer{
     background-image: url("/assets/images/dogpark.png");
 }
 
+.dogparkdetails-bg{
+    background-image: url("/assets/images/dogpark.png");
+    background-size: cover;
+    background-position: left;
+    transform: scale(3);
+    left: 1200px;
+}
+
 .backyard-bg{
     background-image: url("/assets/images/backyard.png");
 }
+
+.backyarddetails-bg{
+    background-image: url("/assets/images/backyard-dog.png");
+    background-size: cover;
+    background-position: left;
+    transform: scale(2.5);
+    left: 1000px;
+}
+
+/*
+TRANSITIONS
+*/
 
 .houseToBackyard{
     background-image: url("/assets/images/house.png");
@@ -66,6 +94,13 @@ footer{
 .indexToDogpark{
     background-image: url("/assets/images/index_default.png");
     animation: indexToDogpark;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.indexToHouse{
+    background-image: url("/assets/images/index_default.png");
+    animation: indexToHouse;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
@@ -94,14 +129,6 @@ footer{
     left: 0;
 }
 
-.dogparkdetails-bg{
-    background-image: url("/assets/images/dogpark.png");
-    background-size: cover;
-    background-position: left;
-    transform: scale(3);
-    left: 1200px;
-}
-
 .backyardTodogdetails{
     background-image: url("/assets/images/backyard-dog.png");
     animation: backyardToBackyarddetails;
@@ -126,13 +153,30 @@ footer{
     left: 0;
 }
 
-.backyarddetails-bg{
-    background-image: url("/assets/images/backyard-dog.png");
-    background-size: cover;
-    background-position: left;
-    transform: scale(2.5);
-    left: 1000px;
+.backyardToHouse{
+    background-image: url("/assets/images/backyard.png");
+    animation: backyardToHouse;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
+
+.backyardToIndex{
+    background-image: url("/assets/images/backyard.png");
+    animation: backyardToIndex;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.dogparkToIndex{
+    background-image: url("/assets/images/dogpark.png");
+    animation: dogparkToIndex;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/*
+SPEECHBUBBLES
+*/
 
 .speechbubble-details-yard#user{
     width: 200px;
@@ -178,12 +222,6 @@ footer{
 
 .speechbubble-details-yard .tb-img {
 	margin: 0;
-}
-
-section {
-	position: absolute;
-	height: 700px;
-	width: 1400px;
 }
 
 .speechbubble-home{
@@ -253,6 +291,8 @@ section {
     font-size: 1rem;
 }
 
+/* SCROLLS AND TABLES 'N' STUFF*/
+
 .content > .paragraphs > p,
 .content > table,
 .content > h1{
@@ -267,93 +307,6 @@ section {
 th{
     text-align: left;
     text-transform: capitalize;
-}
-
-.content > .paragraphs > .dialog{
-    white-space: nowrap;
-    overflow: hidden;
-    animation: type 1s steps(40, end);
-    animation-fill-mode: forwards;
-}
-
-.content > .paragraphs > .dialog:nth-child(2){
-    opacity: 0;
-    animation-delay: 1s;
-}
-
-.content > .paragraphs > .dialog:nth-child(3){
-    opacity: 0;
-    animation-delay: 2s;
-}
-
-.content > .paragraphs > .dialog:nth-child(4){
-    opacity: 0;
-    animation-delay: 3s;
-}
-
-.content > .paragraphs > .dialog:nth-child(5){
-    opacity: 0;
-    animation-delay: 4s;
-}
-
-.content > .paragraphs > .dialog:nth-child(6){
-    opacity: 0;
-    animation-delay: 5s;
-}
-
-.content .continue{
-    position: relative;
-    top: 0px;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 1.5rem;
-    margin-top: 50px;
-    animation-name: bopping;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-.content .dialog-option{
-    height: 20px;
-    position: relative;
-    top: 0px;
-    left: 50px;
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.5rem;
-    animation-name: bopping;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    color: black;
-    text-decoration: none;
-    transition: .2s ease-in-out;
-    margin: 10px 0;
-}
-
-.content .dialog-option:first-child{
-    margin-top: 10px;
-}
-
-.content .dialog-option:hover::before,
-.content .dialog-option:focus::before,
-.buttons > a:first-child:hover::before {
-	background-image: url("/assets/images/active_dialog.png");
-	height: 80%;
-	width: 17px;
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	content: "";
-	position: relative;
-	top: 5px;
-}
-
-.content .continue a{
-    text-decoration: none;
-    color: black;
-    margin-right: 60px;
 }
 
 .scroll-home {
@@ -422,6 +375,101 @@ th{
 textarea{
     width: 350px;
 }
+
+
+/* DIALOG ANIMATIONS */
+
+.content > .paragraphs > .dialog{
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 1s steps(40, end);
+    animation-fill-mode: forwards;
+}
+
+.content > .paragraphs > .dialog:nth-child(2){
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.content > .paragraphs > .dialog:nth-child(3){
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+.content > .paragraphs > .dialog:nth-child(4){
+    opacity: 0;
+    animation-delay: 3s;
+}
+
+.content > .paragraphs > .dialog:nth-child(5){
+    opacity: 0;
+    animation-delay: 4s;
+}
+
+.content > .paragraphs > .dialog:nth-child(6){
+    opacity: 0;
+    animation-delay: 5s;
+}
+
+
+/* DIALOG LINKS */
+.content .continue{
+    position: relative;
+    top: 0px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    animation-name: bopping;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.content .dialog-option{
+    height: 20px;
+    position: relative;
+    top: 0px;
+    left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    animation-name: bopping;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: black;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+    margin: 10px 0;
+}
+
+.content .dialog-option:first-child{
+    margin-top: 10px;
+}
+
+.content .dialog-option:hover::before,
+.content .dialog-option:focus::before,
+.buttons > a:first-child:hover::before {
+	background-image: url("/assets/images/active_dialog.png");
+	height: 80%;
+	width: 17px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	content: "";
+	position: relative;
+	top: 5px;
+}
+
+.content .continue a{
+    text-decoration: none;
+    color: black;
+    margin-right: 60px;
+}
+
+
+/* INPUT FORMS */
 
 textarea{
     background-image: url("/assets/images/bar.png");
@@ -513,8 +561,6 @@ form button:hover{
     font-size: 1.4rem;
 }
 
-
-
 .flex-left{
     align-items: flex-start;
 }
@@ -526,6 +572,8 @@ form button:hover{
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
+
+/* ANIMATIONS */
 
 @keyframes bopping {
     0%   {top: 5px;}
@@ -545,6 +593,14 @@ form button:hover{
     100% { opacity: 1; background-image: url("/assets/images/dogpark.png"); }
 }
 
+@keyframes indexToHouse{
+    0% { opacity: 1; background-image: url("/assets/images/index_default.png"); }
+    40% { opacity: 0; }
+    60% { opacity: 0; }
+    100% { opacity: 1; background-image: url("/assets/images/house.png"); }
+}
+
+
 @keyframes dogparkToIndex{
     0% { opacity: 1; background-image: url("/assets/images/dogpark.png"); }
     40% { opacity: 0; }
@@ -557,6 +613,20 @@ form button:hover{
     40% { opacity: 0; }
     60% { opacity: 0; }
     100% { opacity: 1; background-image: url("/assets/images/backyard.png"); }
+}
+
+@keyframes backyardToHouse{
+    0% { opacity: 1; background-image: url("/assets/images/backyard.png"); }
+    40% { opacity: 0; }
+    60% { opacity: 0; }
+    100% { opacity: 1; background-image: url("/assets/images/house.png"); }
+}
+
+@keyframes backyardToIndex{
+    0% { opacity: 1; background-image: url("/assets/images/backyard.png"); }
+    40% { opacity: 0; }
+    60% { opacity: 0; }
+    100% { opacity: 1; background-image: url("/assets/images/index_default.png"); }
 }
 
 @keyframes dogparkToDogparkdetails{

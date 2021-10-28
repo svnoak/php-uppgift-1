@@ -3,7 +3,7 @@
 $neighbour = chooseNeighbour();
 
 if( isLoggedIn() ){
-    $loginLink = "/home.php";
+    $loginLink = "/home.php?change=indexToHouse";
 }else{
     $loginLink = "?dialog=7&started=true&scene=index";
 }

@@ -160,8 +160,8 @@ $dialog_5 = "
         <div class='content'>
             <div class='paragraphs'>
                 <p>I'm gonna</p>
-                <a class='dialog-option' href='?change=dogparkToHouse&scene=house&dialog=7'>Go back inside.</a>
-                <a class='dialog-option' href='?change=dogparkToIndex&scene=index&dialog=6'>Head back to town.</a>
+                <a class='dialog-option' href='?change=backyardToHouse&scene=home'>Go back inside.</a>
+                <a class='dialog-option' href='?change=backyardToIndex&scene=index&dialog=6'>Head back to town.</a>
                 <a class='dialog-option' href='/sign-out.php'>I'm gonna head out (sign out).</a>
             </div>
         </div>

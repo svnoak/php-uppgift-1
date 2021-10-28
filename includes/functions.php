@@ -224,15 +224,14 @@ function cleanPageName($page){
 
 function setBgImage($change, $scene){
     if( !$change ){
-        echo "bg $scene-bg";
-    }else{
+        echo "bg $scene-";
+    }/* else{
     if( $scene == "index" ){
         echo "bg index";
-    }else{
+    }else{ */
         echo "bg $change";
-    }
-}
-};
+    };
+
 
 /* 
 THIS ONE RIGHT HERE OFFICER!
