@@ -6,6 +6,60 @@ require_once "functions.php";
 function isActive($page){
     if(isPage($page)) echo "active";
 }
+
+if( isset($_SERVER['QUERY_STRING']) ){
+  $query = $_SERVER['QUERY_STRING'];
+  if (strlen($query) > 0){
+    $activateMenu = "$query&menu=true";
+  }else{
+    $activateMenu = "$query?menu=true";
+  }
+}else{
+  $activateMenu = "?menu=true";
+}
+
+if( isLoggedIn() ){
+  $menu = "
+  <div class='menu-bg' id='nav'>
+    <ul class='nav'>
+      <li>
+        <a href='/home.php?dialog=1'>Home</a>
+      </li>
+      <li>
+        <a href='/home.php?scene=dogpark&dialog=2'>Dogs</a>
+      </li>
+      <li>
+        <a href='/home.php?scene=backyard&dialog=1'>Profile</a>
+      </li>
+      <li>
+        <a href='/home.php?scene=backyard&dialog=2'>Add dogs</a>
+      </li>
+      <li>
+        <a href='/sign-out.php'>Sign out</a>
+      </li>
+  </ul>
+</div>
+";
+}else{
+  $menu = "
+  <div class='menu-bg' id='nav'>
+    <ul class='nav'>
+      <li>
+        <a href='/index.php?dialog=1'>Home</a>
+      </li>
+      <li>
+        <a href='/index.php?scene=dogpark&dialog=2'>Dogs</a>
+      </li>
+      <li>
+      <a href='/index.php?dialog=8'>Sign in</a>
+    </li>
+  </ul>
+</div>
+  ";
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +76,18 @@ function isActive($page){
   </script>
 </head>
 <body>
+  <a id="guide-box" href="?<?php echo $activateMenu ?>">
+    <div class="quest"></div>
+    <img src="/assets/images/guide.png" id="guide">
+  </a>
+
+<?php if( isset($_GET['menu']) ){
+  if( $_GET['menu'] ){
+    echo $menu;
+  }
+}
+?>
+
 <!--
 PLEASE PLAY WITH THE CONSOLE CLOSED!
 Some elements might fall outside of you viewwindow otherwise.

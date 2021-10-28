@@ -84,6 +84,7 @@ $ownedDogs .= createTable($userDogs, $headers, $links, true);
 $ownedDogs .=  "
         <div class='continue'>
             <a href='?dialog=6&scene=backyard'>Back</a>
+            <a href='?dialog=2&scene=backyard'>Add</a>
         </div>
     </div>
     <img src='/assets/images/scrolls_bottom.png' class='tb-img'>

@@ -8,6 +8,80 @@
     padding: 0;
 }
 
+#nav{
+    z-index: 1000000;
+    position: relative;
+    top: -80px;
+    height: 1800px;
+    width: 2000px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav ~ section{
+    display: none;
+    background-color:black;
+    background-image: none;
+}
+
+.nav > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.nav > li a{
+    color: white;
+    font-size: 2rem;
+}
+
+#guide-box {
+	position: relative;
+	top: 225px;
+	left: -600px;
+	height: 100px;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+#guide-box:hover > .quest{
+    background-image: none;
+}
+
+#guide-box:hover > .quest:after{
+    position: absolute;
+    content: "Click me for a menu, you cheat.";
+    color: black;
+    height: 30px;
+    width: 1000px;
+    font-size: 1rem;
+}
+
+.quest{
+    background-image: url("/assets/images/quest.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+    z-index: 1000;
+    margin-bottom: 5px;
+}
+
+#guide{
+    height: 100px;
+}
+
 body{
     display: flex;
     justify-content: center;
