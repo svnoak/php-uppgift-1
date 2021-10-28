@@ -82,7 +82,7 @@ $ownedDogs .= echoBreed();
 $ownedDogs .= createTable($userDogs, $headers, $links, true);
 $ownedDogs .=  "
         <div class='continue'>
-            <a href='?dialog=3&scene=backyard'>Back</a>
+            <a href='?dialog=6&scene=backyard'>Back</a>
         </div>
     </div>
     <img src='/assets/images/scrolls_bottom.png' class='tb-img'>
@@ -139,7 +139,7 @@ $addDog = "
 ";
 
 $dialog_4 =
-"<div class='bubble speechbubble-backyard' id='bob'>
+"<div class='bubble speechbubble-backyard' id='user'>
     <img src='/assets/images/speech_top.png' class='tb-img'>
     <div class='content'>
         <div class='paragraphs'>
@@ -160,13 +160,30 @@ $dialog_5 = "
         <div class='content'>
             <div class='paragraphs'>
                 <p>I'm gonna</p>
-                <a class='dialog-option' href='?change=dogparkToHouse&scene=house&dialog=7'>Go to my place.</a>
+                <a class='dialog-option' href='?change=dogparkToHouse&scene=house&dialog=7'>Go back inside.</a>
                 <a class='dialog-option' href='?change=dogparkToIndex&scene=index&dialog=6'>Head back to town.</a>
+                <a class='dialog-option' href='/sign-out.php'>I'm gonna head out (sign out).</a>
             </div>
         </div>
     <img src='/assets/images/speech_bottom.png' class='tb-img'>
 </div>
 ";
 
-$backyard = [$welcomeMessage, $ownedDogs, $addDog, $dialog_4 ,$success_added, $dialog_5 ];
+$dialog_6 = "
+<div class='bubble speechbubble-backyard' id='bob'>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
+    <div class='content'>
+        <div class='paragraphs'>
+            <p class='dialog'>So...</p>
+            <p class='dialog'>What do you wanna do next?</p>
+        </div>
+        <div class='continue'>
+            <a href='?dialog=5&scene=backyard'>Continue</a>
+        </div>
+    </div>
+    <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
+</div>
+";
+
+$backyard = [$welcomeMessage, $ownedDogs, $addDog, $dialog_4 ,$success_added, $dialog_5, $dialog_6 ];
 ?>
