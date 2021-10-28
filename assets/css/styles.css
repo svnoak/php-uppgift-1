@@ -91,6 +91,24 @@ TRANSITIONS
     animation-fill-mode: forwards;
 }
 
+.houseToBackyard .bubble,
+.houseToIndex .bubble,
+.houseToDogpark .bubble,
+.indexToDogpark .bubble,
+.indexToHouse .bubble,
+.dogparkToDogparkdetails .bubble,
+.backyardTodogdetails .bubble,
+.backyarddetailsToBackyard .bubble,
+.backyardToHouse .bubble,
+.backyardToIndex .bubble,
+.dogparkToIndex .bubble {
+    opacity: 0;
+    animation: dissapear;
+    animation-delay: 1.5s;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
 .houseToIndex{
     background-image: url("/assets/images/house.png");
     animation: houseToIndex;
@@ -407,6 +425,7 @@ textarea{
     overflow: hidden;
     animation: type 1s steps(40, end);
     animation-fill-mode: forwards;
+    
 }
 
 .content > .paragraphs > .dialog:nth-child(2){
@@ -588,14 +607,6 @@ form button:hover{
     align-items: flex-start;
 }
 
-.dissapear{
-    opacity: 1;
-    animation: dissapear;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-}
-
 /* ANIMATIONS */
 
 #angryanimation{
@@ -605,6 +616,11 @@ form button:hover{
     animation: angryanimation steps(10, end);
     animation-duration: .1s;
     animation-iteration-count: 10;
+}
+
+@keyframes dissapear{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @keyframes angryanimation{
