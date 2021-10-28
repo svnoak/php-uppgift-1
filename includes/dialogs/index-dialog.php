@@ -232,7 +232,7 @@ $dialog_6 = "
     </div>
 ";
 
-$dialog_6 = "
+$dialog_9 = "
     <div class='bubble speechbubble-home' id='bob'>
         <img src='/assets/images/speech_top.png' class='tb-img'>
         <div class='content'>
@@ -249,6 +249,38 @@ $dialog_6 = "
     </div>
 ";
 
-$index = [$welcomeMessage, $dialog_1, $dialog_2, $dialog_3, $dialog_4, $dialog_5, $dialog_6, $signin_1, $signin_2];
+$dialog_10 = "
+    <div class='bubble speechbubble-home' id='bob'>
+        <img src='/assets/images/speech_top.png' class='tb-img'>
+        <div class='content'>
+            <div class='paragraphs'>
+                <p class='dialog'>Are you sure this is your adress?</p>
+                <p class='dialog'>Or maybe you got the wrong key?</p>
+            </div>
+            <div class='continue'>
+                <a href='?dialog=8&scene=index'>Uuuhh.....</a>
+            </div>
+        </div>
+        <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+    </div>
+";
+
+$dialog_11 = "
+    <div class='bubble speechbubble-home' id='bob'>
+        <img src='/assets/images/speech_top.png' class='tb-img'>
+        <div class='content'>
+            <div class='paragraphs'>
+                <p class='dialog'>Well..</p>
+                <p class='dialog'>Shouldn't you unlock the door with a key?</p>
+            </div>
+            <div class='continue'>
+                <a href='?dialog=8&scene=index'>Oh, right..</a>
+            </div>
+        </div>
+        <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+    </div>
+";
+
+$index = [$welcomeMessage, $dialog_1, $dialog_2, $dialog_3, $dialog_4, $dialog_5, $dialog_6, $signin_1, $signin_2, $dialog_9, $dialog_10, $dialog_11];
 
 ?>

@@ -8,7 +8,7 @@ if( isPage("home") ){
     if( !isLoggedIn() ){
         $_SESSION['status'] = "Please log in to access this page";
         $_SESSION['error'] = 401;
-        header("location: /index.php?dialog=6");
+        header("location: /index.php?dialog=9");
         exit();
     }
 }else{
@@ -17,7 +17,7 @@ if( isPage("home") ){
             if( $_GET['scene'] == "home" || $_GET['scene'] == "backyard" || $_GET['scene'] == "backyarddetails"){
                 $_SESSION['status'] = "Please log in to access this page";
                 $_SESSION['error'] = 401;
-                header("location: /index.php?dialog=6");
+                header("location: /index.php?dialog=9");
                 exit();
             }
         }

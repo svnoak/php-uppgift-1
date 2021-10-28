@@ -18,12 +18,12 @@ if( isset($_POST['signin']) ){
                     header("location: /home.php?change=indexToHouse");
                     exit();
                 }else{
-                    setSessionStatus("Wrong email or password");
+                    header("location: /index.php?dialog=10");
                 }
-            } setSessionStatus("Wrong email or password");
+            }  header("location: /index.php?dialog=10");
         }
     }else{
-        setSessionStatus("You need to enter both email and password");
+        header("location: /index.php?dialog=11");
     }
 }
 ?>
