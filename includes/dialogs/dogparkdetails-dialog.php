@@ -5,7 +5,7 @@ $dogInfo_1 = "";
 $dogInfo_2 = "";
 $dogInfo_3 = "";
 
-
+// This is kaos. Fanns inget bättre sätt att få ihop flera bubbler på ett 'snyggt' sätt.
 if( isset($_GET['id']) ){
     if($_GET['id']){
         $id = $_GET['id'];

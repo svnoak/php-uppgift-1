@@ -1,9 +1,6 @@
 <?php
 
-/*
-IF NO DOGS => ADD DOG DIALOG;
-IF DOGS => ADD DOG DIALOG WITH BACKYARD DIALOG;
-*/
+// Sköter småjusteringar beroende på om besökaren är inloggad eller ej.
 
 if( isset($_SESSION['userID']) ){
     $dogs = getFile("db.json")["dogs"];
@@ -22,6 +19,8 @@ if( isset($_SESSION['dogPickedUp'], $_SESSION['lastDog']) ){
     $pickedUpDog = "";
 }
 
+
+// Olika dialoger beroende på om man har hundar eller ej.
 if( count($userDogs) > 0 ){
     $welcomeMessage = "
     <div class='bubble speechbubble-house' id='bob'>

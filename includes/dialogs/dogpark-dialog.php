@@ -23,6 +23,7 @@ if( isset($_GET['breed']) ){
     }
 }
 
+// Småjusteringar i text och länkar beroende på om man är inloggad eller inte.
 if( isLoggedIn()){
     $myPlace = "?change=dogparkToHouse&scene=house";
     $signout = "<a class='dialog-option' href='/sign-out.php?change=dogparkToIndex'>I'm gonna go (sign out).</a>";

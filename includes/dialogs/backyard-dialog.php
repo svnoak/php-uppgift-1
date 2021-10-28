@@ -37,6 +37,7 @@ if( isset($_GET['breed']) ){
     }
 }
 
+// Olika beorden på om man har hundar eller ej
 if( count($userDogs) > 0 ){
 $welcomeMessage = "
     <div class='bubble speechbubble-backyard' id='bob'>

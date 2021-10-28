@@ -3,6 +3,8 @@ require_once "includes/header.php";
 
 $neighbour = chooseNeighbour();
 
+
+// Animationer och changes är ett helvette jag byggt.
 if(isset($_GET['change'])){
     $change = $_GET['change'];
 }else{

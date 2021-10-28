@@ -131,6 +131,8 @@ function isPage($page){
     }
 }
 
+// Jag tror inte jag faktiskt använder denna någonstans, men nu är kl 16 och jag är rädd att ta bort den.
+// Men den ska kolla om någon får komma åt en scen eller inte typ och används för att isåfall slänga ut folk igen.
 function isFrobiddenScene($scene){
     if( isset($_GET['scene']) ){
         if( $scene == "home" || $scene == "backyard" || $scene == "backyarddetails" ){
@@ -247,6 +249,8 @@ function setBgImage($change, $scene){
 
 /* 
 THIS ONE RIGHT HERE OFFICER!
+
+Den fixar snygga dialoger, även om dialogerna annars är kaos. Men denna är snygg <3.
 */
 
 function dialogOptions($scene, $dialogs){
@@ -263,9 +267,11 @@ function dialogOptions($scene, $dialogs){
     }
 }
 
+// Calling your friendly neighbour.
+
 function chooseNeighbour(){
     if( !isset($_SESSION['neighbour'])) {
-    $names = ["Jörgen", "Lennart", "Bob", "Gertrud"];
+    $names = ["Jörgen", "Lennart", "Bob", "Gertrud", "Stefan"];
     $index = array_rand($names);
     $neighbour = $names[$index];
     $_SESSION['neighbour'] = $neighbour;

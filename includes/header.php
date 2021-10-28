@@ -76,6 +76,8 @@ if( isLoggedIn() ){
   </script>
 </head>
 <body>
+
+<!-- If you wanna know, the guide is called Max -->
   <a id="guide-box" href="?<?php echo $activateMenu ?>">
     <div class="quest"></div>
     <img src="/assets/images/guide.png" id="guide">
