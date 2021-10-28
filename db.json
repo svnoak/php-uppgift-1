@@ -51,6 +51,14 @@
             "notes": null,
             "owner": 1,
             "id": 4
+        },
+        {
+            "name": "Jonna",
+            "breed": "Collie",
+            "age": "3",
+            "notes": "Collies are amazing",
+            "owner": 1,
+            "id": 5
         }
     ]
 }

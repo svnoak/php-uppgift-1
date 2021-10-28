@@ -5,7 +5,7 @@ $neighbour = chooseNeighbour();
 if( isLoggedIn() ){
     $loginLink = "/home.php";
 }else{
-    $loginLink = "?dialog=7&started=true";
+    $loginLink = "?dialog=7&started=true&scene=index";
 }
 
 $welcomeMessage = "
@@ -17,7 +17,7 @@ $welcomeMessage = "
                 <p>The Game</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=1'>Continue</a>
+                <a href='?dialog=1&scene=index'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/scrolls_bottom.png' class='tb-img'>
@@ -35,7 +35,7 @@ if( isset($_SESSION['dialogStarted']) ){
                 <p class='dialog'>What are you up to?</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=2'>Continue</a>
+                <a href='?dialog=2&scene=index'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
@@ -49,7 +49,7 @@ if( isset($_SESSION['dialogStarted']) ){
             <div class='paragraphs'>
                 <p>Oh, I'm on my way to</p>
                 <a class='dialog-option' href='$loginLink'>Go to my place.</a>
-                <a class='dialog-option' href='?dialog=5'>Visit the dogpark.</a>
+                <a class='dialog-option' href='?dialog=5&scene=index'>Visit the dogpark.</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png' class='tb-img''>
@@ -63,7 +63,7 @@ $dialog_4 = "<div class='bubble speechbubble-home' id='user'>
     <div class='paragraphs'>
         <p>Sure, let's</p>
         <a class='dialog-option' href='$loginLink'>Go to my place.</a>
-        <a class='dialog-option' href='?dialog=5&started=true'>Visit the dogpark.</a>
+        <a class='dialog-option' href='?dialog=5&started=true&scene=index'>Visit the dogpark.</a>
     </div>
 </div>
 <img src='/assets/images/speech_bottom.png' class='tb-img'>
@@ -82,7 +82,7 @@ $dialog_1 = "
                 <p class='dialog'>Do you want to hang out?!</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=2'>Continue</a>
+                <a href='?dialog=2&scene=index'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
@@ -95,7 +95,7 @@ $dialog_2 = "
         <div class='content'>
             <div class='paragraphs'>
                 <p>Sure, sounds like fun!</p>
-                <a class='dialog-option active' href='?dialog=3'>What do you suggest?</a>
+                <a class='dialog-option active' href='?dialog=3&scene=index'>What do you suggest?</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png' class='tb-img'>
@@ -112,7 +112,7 @@ $dialog_3 = "
                 <p class='dialog'>or visit the dogpark maybe?</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=4'>Continue</a>
+                <a href='?dialog=4&scene=index'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
@@ -126,7 +126,7 @@ $dialog_4 = "
             <div class='paragraphs'>
                 <p>Sure, let's</p>
                 <a class='dialog-option' href='$loginLink'>Go to my place.</a>
-                <a class='dialog-option' href='?dialog=5&started=true'>Visit the dogpark.</a>
+                <a class='dialog-option' href='?dialog=5&started=true&scene=index'>Visit the dogpark.</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png' class='tb-img'>
@@ -160,7 +160,7 @@ $signin_1 = "
                 <p class='dialog'>There they are!</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=8'>Continue</a>
+                <a href='?dialog=8&scene=index'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png' class='tb-img'>
@@ -200,7 +200,7 @@ $dialog_6 = "
                 <p class='dialog'>or go back to the dogpark?</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=4'>Continue</a>
+                <a href='?dialog=4&scene=index'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
