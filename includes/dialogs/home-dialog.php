@@ -51,7 +51,8 @@ $dialog_1 = "
         <div class='paragraphs'>
             <a class='dialog-option' href='?dialog=0&change=houseToBackyard&scene=backyard'>Absolutely, to the backyard!</a>
             <a class='dialog-option' href='$linkText'>No, gotta pick up another dog of mine first.</a>
-            <a class='dialog-option' href='/sign-out.php'>I'm gonna get out of here (sign out).</a>
+            <a class='dialog-option' href='?change=houseToDogpark&scene=dogpark'>I'm on my way to the dogpark.</a>
+            <a class='dialog-option' href='/sign-out.php?change=houseToIndex'>I'm gonna get out of here (sign out).</a>
         </div>
     </div>
     <img src='/assets/images/speech_bottom.png' class='tb-img'>
@@ -82,9 +83,9 @@ $dialog_1 = "
 <img src='/assets/images/speech_top.png' class='tb-img'>
 <div class='content'>
     <div class='paragraphs'>
-    <a class='dialog-option' href='?dialog=0&change=houseToBackyard&scene=backyard'>Not really, let's chill in the backyard instead.</a>
     <a class='dialog-option' href='?dialog=2'>I guess you're right!</a>
-    <a class='dialog-option' href='/sign-out.php'>I'm gonna get out of here (sign out).</a>
+    <a class='dialog-option' href='?dialog=0&change=houseToBackyard&scene=backyard'>Not really, let's chill in the backyard instead.</a>
+    <a class='dialog-option' href='/sign-out.php?change=houseToIndex'>I'm gonna get out of here (sign out).</a>
     </div>
     <div class='continue'>
         <a href='?dialog=2'>Continue</a>

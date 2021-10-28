@@ -19,14 +19,18 @@ if( isset($_GET['breed']) ){
     if($_GET['breed']){
         $breed = URLToParam($_GET['breed']);
         $allDogs = filterData($allDogs, "breed", $breed );
-        $info = "<span>Filtered by $breed || <a href='?scene=dogpark&dialog=2'>Show all dogs</a></span>";
+        $info = "<span>Filtered by $breed || <a href='?scene=dogpark&dialog=2'>Show all dogs</a></span>";   
     }
 }
 
 if( isLoggedIn()){
     $myPlace = "?change=dogparkToHouse&scene=house";
+    $signout = "<a class='dialog-option' href='/sign-out.php?change=dogparkToIndex'>I'm gonna go (sign out).</a>";
+    $signinText = "";
 }else{
     $myPlace = "?change=dogparkToIndex&scene=index&dialog=7";
+    $signout = "";
+    $signinText = " (sign in)";
 }
 
 function echoBreed(){
@@ -106,8 +110,9 @@ $dialog_3 = "
         <div class='content'>
             <div class='paragraphs'>
                 <p>I'm gonna</p>
-                <a class='dialog-option' href='$myPlace'>Go to my place.</a>
+                <a class='dialog-option' href='$myPlace'>Go to my place$signinText.</a>
                 <a class='dialog-option' href='?change=dogparkToIndex&scene=index&dialog=6'>Head back to town.</a>
+                $signout
             </div>
         </div>
     <img src='/assets/images/speech_bottom.png' class='tb-img'>

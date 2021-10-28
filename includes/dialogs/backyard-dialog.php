@@ -32,7 +32,7 @@ if( isset($_GET['breed']) ){
     if($_GET['breed']){
         $breed = URLToParam($_GET['breed']);
         $allDogs = filterData($userDogs, "breed", $breed );
-        $info = "<span>Filtered by $breed || <a href='?scene=dogpark&dialog=2'>Show all dogs</a></span>";
+        $info = "<span>Filtered by $breed || <a href='?scene=backyard&dialog=2'>Show all dogs</a></span>";
     }
 }
 

@@ -91,6 +91,20 @@ TRANSITIONS
     animation-fill-mode: forwards;
 }
 
+.houseToIndex{
+    background-image: url("/assets/images/house.png");
+    animation: houseToIndex;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.houseToDogpark{
+    background-image: url("/assets/images/house.png");
+    animation: houseToDogpark;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 .indexToDogpark{
     background-image: url("/assets/images/index_default.png");
     animation: indexToDogpark;
@@ -600,7 +614,6 @@ form button:hover{
     100% { opacity: 1; background-image: url("/assets/images/house.png"); }
 }
 
-
 @keyframes dogparkToIndex{
     0% { opacity: 1; background-image: url("/assets/images/dogpark.png"); }
     40% { opacity: 0; }
@@ -613,6 +626,20 @@ form button:hover{
     40% { opacity: 0; }
     60% { opacity: 0; }
     100% { opacity: 1; background-image: url("/assets/images/backyard.png"); }
+}
+
+@keyframes houseToIndex{
+    0% { opacity: 1; background-image: url("/assets/images/house.png"); }
+    40% { opacity: 0; }
+    60% { opacity: 0; }
+    100% { opacity: 1; background-image: url("/assets/images/index_default.png"); }
+}
+
+@keyframes houseToDogpark{
+    0% { opacity: 1; background-image: url("/assets/images/house.png"); }
+    40% { opacity: 0; }
+    60% { opacity: 0; }
+    100% { opacity: 1; background-image: url("/assets/images/dogpark.png"); }
 }
 
 @keyframes backyardToHouse{
