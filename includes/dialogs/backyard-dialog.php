@@ -37,7 +37,7 @@ if( isset($_GET['breed']) ){
     }
 }
 
-if( $userDogs > 0 ){
+if( count($userDogs) > 0 ){
 $welcomeMessage = "
     <div class='bubble speechbubble-backyard' id='bob'>
         <img src='/assets/images/speech_top.png' class='tb-img'>
@@ -66,7 +66,7 @@ $welcomeMessage = "
                 <p class='dialog'>if you already have a doghouse?</p>
             </div>
             <div class='continue'>
-                <a href='?dialog=2&scene=backyard'>Continue</a>
+                <a href='?dialog=7&scene=backyard'>Continue</a>
             </div>
         </div>
         <img src='/assets/images/speech_bottom_right.png' class='tb-img'>
@@ -186,5 +186,19 @@ $dialog_6 = "
 </div>
 ";
 
-$backyard = [$welcomeMessage, $ownedDogs, $addDog, $dialog_4 ,$success_added, $dialog_5, $dialog_6 ];
+$dialog_7 = "
+<div class='bubble speechbubble-house' id='user'>
+<img src='/assets/images/speech_top.png' class='tb-img'>
+<div class='content'>
+    <div class='paragraphs'>
+    <a class='dialog-option' href='?dialog=2'>I guess you're right!</a>
+    <a class='dialog-option' href='?dialog=0&change=backyardToHouse&scene=home'>Not really, let's go back inside..</a>
+    <a class='dialog-option' href='/sign-out.php?change=backyardToIndex'>I'm gonna get out of here (sign out).</a>
+    </div>
+</div>
+<img src='/assets/images/speech_bottom.png' class='tb-img'>
+</div>
+";
+
+$backyard = [$welcomeMessage, $ownedDogs, $addDog, $dialog_4 ,$success_added, $dialog_5, $dialog_6, $dialog_7 ];
 ?>
