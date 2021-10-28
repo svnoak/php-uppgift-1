@@ -5,9 +5,11 @@ $neighbour = chooseNeighbour();
 if( isLoggedIn() ){
     $loginLink = "/home.php?change=indexToHouse";
     $signinText = "";
+    $signout = "<a class='dialog-option' href='/sign-out.php'>I'm gonna go (sign out).</a>";
 }else{
     $loginLink = "?dialog=7&started=true&scene=index";
     $signinText = " (sign in)";
+    $signout = "";
 }
 
 $welcomeMessage = "
@@ -52,6 +54,7 @@ if( isset($_SESSION['dialogStarted']) ){
                 <p>Oh, I'm on my way to</p>
                 <a class='dialog-option' href='$loginLink'>Go to my place$signinText.</a>
                 <a class='dialog-option' href='?dialog=5&scene=index'>Visit the dogpark.</a>
+                $signout
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png' class='tb-img''>
@@ -66,6 +69,7 @@ $dialog_4 = "<div class='bubble speechbubble-home' id='user'>
         <p>Sure, let's</p>
         <a class='dialog-option' href='$loginLink'>Go to my place$signinText.</a>
         <a class='dialog-option' href='?dialog=5&started=true&scene=index'>Visit the dogpark.</a>
+        $signout
     </div>
 </div>
 <img src='/assets/images/speech_bottom.png' class='tb-img'>
@@ -129,6 +133,7 @@ $dialog_4 = "
                 <p>Sure, let's</p>
                 <a class='dialog-option' href='$loginLink'>Go to my place$signinText.</a>
                 <a class='dialog-option' href='?dialog=5&started=true&scene=index'>Visit the dogpark.</a>
+
             </div>
         </div>
         <img src='/assets/images/speech_bottom.png' class='tb-img'>
