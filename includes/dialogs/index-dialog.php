@@ -1,7 +1,9 @@
 <?php
 
+// Genererar en go o gla granne.
 $neighbour = chooseNeighbour();
 
+// Sköter småjusteringar beroende på om besökaren är inloggad eller ej.
 if( isLoggedIn() ){
     $loginLink = "/home.php?change=indexToHouse";
     $signinText = "";

@@ -12,6 +12,7 @@ if( isPage("home") ){
         exit();
     }
 }else{
+    // Kollar också om det finns scener i urlen och om så, skicka tillbaka användern.
     if(isset($_GET['scene'])){
         if( !isLoggedIn() ){
             if( $_GET['scene'] == "home" || $_GET['scene'] == "backyard" || $_GET['scene'] == "backyarddetails"){

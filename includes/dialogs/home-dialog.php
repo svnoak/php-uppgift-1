@@ -165,5 +165,21 @@ $success_added = "
 </div>
 ";
 
-$home = [$welcomeMessage, $dialog_1, $dialog_2, $dialog_3, $success_added];
+$addDog_fail = "
+<div class='bubble speechbubble-house' id='user'>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
+    <div class='content'>
+        <div class='paragraphs'>
+        <p class='dialog'>...I really should remember everything</p>
+        <p class='dialog'>It is my dog after all..</p>
+        </div>
+        <div class='continue'>
+        <a href='?dialog=2&scene=home'>Continue</a>
+    </div>
+    </div>
+    <img src='/assets/images/speech_bottom.png' class='tb-img'>
+</div>
+";
+
+$home = [$welcomeMessage, $dialog_1, $dialog_2, $dialog_3, $success_added, "", "", "",$addDog_fail];
 ?>

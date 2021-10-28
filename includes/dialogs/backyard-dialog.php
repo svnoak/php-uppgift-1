@@ -201,5 +201,21 @@ $dialog_7 = "
 </div>
 ";
 
-$backyard = [$welcomeMessage, $ownedDogs, $addDog, $dialog_4 ,$success_added, $dialog_5, $dialog_6, $dialog_7 ];
+$addDog_fail = "
+<div class='bubble speechbubble-house' id='user'>
+    <img src='/assets/images/speech_top.png' class='tb-img'>
+    <div class='content'>
+        <div class='paragraphs'>
+        <p class='dialog'>Shouldn't I fill in all of it?</p>
+        <p class='dialog'>It is my dog after all..</p>
+        </div>
+        <div class='continue'>
+        <a href='?dialog=2&scene=backyard'>Continue</a>
+    </div>
+    </div>
+    <img src='/assets/images/speech_bottom.png' class='tb-img'>
+</div>
+";
+
+$backyard = [$welcomeMessage, $ownedDogs, $addDog, $dialog_4 ,$success_added, $dialog_5, $dialog_6, $dialog_7, $addDog_fail ];
 ?>

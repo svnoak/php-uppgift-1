@@ -18,7 +18,7 @@ if( isset($_POST['add-dog']) ){
         header("location: /home.php?dialog=4&scene=$scene" );
         setSessionStatus("Successfully added dog $data[name].");
     }else{
-        setSessionStatus("You need to write something in all fields :)");
+        header("location: /home.php?dialog=8&scene=$scene");
     }
 }
 ?>
