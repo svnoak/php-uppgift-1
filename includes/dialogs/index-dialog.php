@@ -233,9 +233,9 @@ $dialog_6 = "
 ";
 
 $dialog_9 = "
-    <div class='bubble speechbubble-home' id='bob'>
-        <img src='/assets/images/speech_top.png' class='tb-img'>
-        <div class='content'>
+    <div class='bubble speechbubble-home' id='angryanimation'>
+        <img src='/assets/images/angry_content_top.png' class='tb-img'>
+        <div class='content angry'>
             <div class='paragraphs'>
                 <p class='dialog'>Are you nuts!?</p>
                 <p class='dialog'>You can't just try breaking</p>
@@ -245,7 +245,7 @@ $dialog_9 = "
                 <a href='?dialog=3&scene=index'>You got me...</a>
             </div>
         </div>
-        <img src='/assets/images/speech_bottom_left.png' class='tb-img'>
+        <img src='/assets/images/angry_content_bottom.png' class='tb-img'>
     </div>
 ";
 

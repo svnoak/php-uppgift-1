@@ -305,6 +305,15 @@ SPEECHBUBBLES
     font-size: 1rem;
 }
 
+.angry{
+    background-image: url("/assets/images/angry_content.png") !important;
+    width: 102% !important;
+}
+
+.angry .paragraphs p{
+    padding-left: 60px !important;
+}
+
 /* SCROLLS AND TABLES 'N' STUFF*/
 
 .content > .paragraphs > p,
@@ -588,6 +597,21 @@ form button:hover{
 }
 
 /* ANIMATIONS */
+
+#angryanimation{
+    position: relative;
+    left: 100px;
+    top: 30px;
+    animation: angryanimation steps(10, end);
+    animation-duration: .1s;
+    animation-iteration-count: 10;
+}
+
+@keyframes angryanimation{
+    0%   {left: 99px;}
+    50%  {left: 100px;}
+    100%  {top: 101px;}
+}
 
 @keyframes bopping {
     0%   {top: 5px;}
