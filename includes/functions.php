@@ -193,7 +193,7 @@ function deleteInDB( $searchArg, $dbarg, $searchKey, $returnValue ){
 }
 
 // Gör en 2-dimensional array 1D utifrån keyn som man vill söka efter.
-function columnSearch($searchArg, $db, $searchKey, $dbarg,){
+function columnSearch($searchArg, $db, $searchKey, $dbarg){
     $column = array_column($db, $searchKey);
     $found = array_search($searchArg, $column);
     return $found;

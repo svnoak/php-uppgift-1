@@ -4,7 +4,7 @@ require_once "includes/header.php";
 $scene = $_GET['scene'];
 
 if( isset($_POST['add-dog']) ){
-    if( strlen($_POST['name'] > 0) && strlen($_POST['breed'] > 0 ) && strlen($_POST['age'] > 0) ){
+    if( strlen($_POST['name'] >= 1) && strlen($_POST['breed'] >= 1 ) && strlen($_POST['age'] >= 1) ){
         $_SESSION['lastDog'] = $_POST['name'];
         $_SESSION['dogPickedUp'] = $_POST['breed'];
         $data = [
